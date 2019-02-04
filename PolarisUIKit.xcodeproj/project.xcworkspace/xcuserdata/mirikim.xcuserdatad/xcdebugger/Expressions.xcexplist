@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "AttributedTextField.initialize():AttributedTextField.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "boxLayer.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AttributedUILabel.type.setter:AttributedUILabel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.styleAttr.attribute">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AttributedUILabel.drawText(in:):AttributedUILabel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.styleAttr.attribute">
+            </PersistentString>
+            <PersistentString
+               value = "self.styleAttr.type">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AttributedButton.type.setter:AttributedButton.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.titleEdgeInsets">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AttributedView.initialize():AttributedView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "decorateLayer.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BoxAttribute.padding.didset:Palette.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "padding">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AttributedButton.contentRect(forBounds:):AttributedButton.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "super.contentRect(forBounds: bounds)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
