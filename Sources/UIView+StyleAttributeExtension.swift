@@ -64,4 +64,10 @@ public extension UIView {
             return bounds
         }
     }
+    
+    public func injectAttribute(attributeName: String) {
+        if let attribute = Palette.getAttribute(id: attributeName) {
+            self.styleAttr.attribute = attribute
+        }
+    }
 }

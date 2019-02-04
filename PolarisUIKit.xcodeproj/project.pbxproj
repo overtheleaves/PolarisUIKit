@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE55EB4E2207E67E0006DC2E /* AttributedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB4D2207E67E0006DC2E /* AttributedTextField.swift */; };
-		FE55EB5022083DB20006DC2E /* AttributedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB4F22083DB10006DC2E /* AttributedView.swift */; };
+		FE55EB4E2207E67E0006DC2E /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB4D2207E67E0006DC2E /* TextFieldComponent.swift */; };
+		FE55EB5022083DB20006DC2E /* ViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB4F22083DB10006DC2E /* ViewComponent.swift */; };
+		FE55EB5322087CB70006DC2E /* ButtonGroupComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */; };
 		FED369E92205706100B4F2A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369E82205706100B4F2A8 /* AppDelegate.swift */; };
 		FED369EB2205706100B4F2A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369EA2205706100B4F2A8 /* ViewController.swift */; };
 		FED369EE2205706100B4F2A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED369EC2205706100B4F2A8 /* Main.storyboard */; };
@@ -17,14 +18,15 @@
 		FED369FE2205715900B4F2A8 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369FD2205715900B4F2A8 /* Palette.swift */; };
 		FED36A00220571AE00B4F2A8 /* StyleAttributeCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369FF220571AE00B4F2A8 /* StyleAttributeCompatible.swift */; };
 		FED36A02220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A01220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift */; };
-		FED36A06220711CA00B4F2A8 /* AttributedUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A05220711CA00B4F2A8 /* AttributedUILabel.swift */; };
-		FED36A082207461100B4F2A8 /* AttributedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A072207461100B4F2A8 /* AttributedButton.swift */; };
-		FED36A0A2207D35100B4F2A8 /* AttributedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A092207D35100B4F2A8 /* AttributedTextView.swift */; };
+		FED36A06220711CA00B4F2A8 /* LabelComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A05220711CA00B4F2A8 /* LabelComponent.swift */; };
+		FED36A082207461100B4F2A8 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A072207461100B4F2A8 /* ButtonComponent.swift */; };
+		FED36A0A2207D35100B4F2A8 /* TextViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A092207D35100B4F2A8 /* TextViewComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FE55EB4D2207E67E0006DC2E /* AttributedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTextField.swift; sourceTree = "<group>"; };
-		FE55EB4F22083DB10006DC2E /* AttributedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedView.swift; sourceTree = "<group>"; };
+		FE55EB4D2207E67E0006DC2E /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
+		FE55EB4F22083DB10006DC2E /* ViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponent.swift; sourceTree = "<group>"; };
+		FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupComponent.swift; sourceTree = "<group>"; };
 		FED369E52205706100B4F2A8 /* PolarisUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarisUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED369E82205706100B4F2A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED369EA2205706100B4F2A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,9 +38,9 @@
 		FED369FD2205715900B4F2A8 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		FED369FF220571AE00B4F2A8 /* StyleAttributeCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleAttributeCompatible.swift; sourceTree = "<group>"; };
 		FED36A01220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+StyleAttributeExtension.swift"; sourceTree = "<group>"; };
-		FED36A05220711CA00B4F2A8 /* AttributedUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedUILabel.swift; sourceTree = "<group>"; };
-		FED36A072207461100B4F2A8 /* AttributedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedButton.swift; sourceTree = "<group>"; };
-		FED36A092207D35100B4F2A8 /* AttributedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTextView.swift; sourceTree = "<group>"; };
+		FED36A05220711CA00B4F2A8 /* LabelComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelComponent.swift; sourceTree = "<group>"; };
+		FED36A072207461100B4F2A8 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		FED36A092207D35100B4F2A8 /* TextViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE55EB5122087A360006DC2E /* components */ = {
+			isa = PBXGroup;
+			children = (
+				FED36A05220711CA00B4F2A8 /* LabelComponent.swift */,
+				FED36A072207461100B4F2A8 /* ButtonComponent.swift */,
+				FED36A092207D35100B4F2A8 /* TextViewComponent.swift */,
+				FE55EB4D2207E67E0006DC2E /* TextFieldComponent.swift */,
+				FE55EB4F22083DB10006DC2E /* ViewComponent.swift */,
+				FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		FED369DC2205706100B4F2A8 = {
 			isa = PBXGroup;
 			children = (
@@ -89,11 +104,7 @@
 				FED369FD2205715900B4F2A8 /* Palette.swift */,
 				FED369FF220571AE00B4F2A8 /* StyleAttributeCompatible.swift */,
 				FED36A01220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift */,
-				FED36A05220711CA00B4F2A8 /* AttributedUILabel.swift */,
-				FED36A072207461100B4F2A8 /* AttributedButton.swift */,
-				FED36A092207D35100B4F2A8 /* AttributedTextView.swift */,
-				FE55EB4D2207E67E0006DC2E /* AttributedTextField.swift */,
-				FE55EB4F22083DB10006DC2E /* AttributedView.swift */,
+				FE55EB5122087A360006DC2E /* components */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -170,15 +181,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FED369FE2205715900B4F2A8 /* Palette.swift in Sources */,
-				FED36A06220711CA00B4F2A8 /* AttributedUILabel.swift in Sources */,
-				FE55EB4E2207E67E0006DC2E /* AttributedTextField.swift in Sources */,
+				FED36A06220711CA00B4F2A8 /* LabelComponent.swift in Sources */,
+				FE55EB4E2207E67E0006DC2E /* TextFieldComponent.swift in Sources */,
 				FED369EB2205706100B4F2A8 /* ViewController.swift in Sources */,
-				FE55EB5022083DB20006DC2E /* AttributedView.swift in Sources */,
-				FED36A0A2207D35100B4F2A8 /* AttributedTextView.swift in Sources */,
+				FE55EB5022083DB20006DC2E /* ViewComponent.swift in Sources */,
+				FE55EB5322087CB70006DC2E /* ButtonGroupComponent.swift in Sources */,
+				FED36A0A2207D35100B4F2A8 /* TextViewComponent.swift in Sources */,
 				FED36A02220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift in Sources */,
 				FED369E92205706100B4F2A8 /* AppDelegate.swift in Sources */,
 				FED36A00220571AE00B4F2A8 /* StyleAttributeCompatible.swift in Sources */,
-				FED36A082207461100B4F2A8 /* AttributedButton.swift in Sources */,
+				FED36A082207461100B4F2A8 /* ButtonComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

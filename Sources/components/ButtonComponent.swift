@@ -8,7 +8,47 @@
 
 import UIKit
 
-public class AttributedButton: UIButton {
+public class ButtonComponent: UIButton {
+    
+    public var buttonRoleType: ButtonRoleType = .normal
+    public var buttonGroup: ButtonGroupComponent? {
+        willSet {
+            do {
+                try newButtonGroup(group: newValue)
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    override public var isSelected: Bool {
+        didSet {
+            if isSelected {
+                // radio button -> need to notify buttonGroup
+                if buttonRoleType == .radio {
+                    if let group = self.buttonGroup {
+                        group.notifyButtonSelectedChange(self)
+                    }
+                }
+                
+                self.layer.backgroundColor = UIColor.red.cgColor
+            } else {
+                self.layer.backgroundColor = UIColor.gray.cgColor
+            }
+        }
+    }
+    
+    @IBInspectable public var roleType: String = "normal" {
+        willSet {
+            if newValue == "radio" {
+                self.buttonRoleType = .radio
+            } else if newValue == "check" {
+                self.buttonRoleType = .check
+            } else {
+                self.buttonRoleType = .normal
+            }
+        }
+    }
     
     @IBInspectable public var type: String? {
         get {
@@ -17,12 +57,40 @@ public class AttributedButton: UIButton {
         set {
             if self.styleAttr.type != newValue {
                 self.styleAttr.type = newValue
-                initialize()
+                decorate()
             }
         }
     }
     
-    func initialize() {
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+        decorate()        
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        decorate()
+    }
+    
+    private func newButtonGroup(group: ButtonGroupComponent?) throws {
+        guard group == nil else {
+            throw NSError(domain: "ButtonComponent", code: 1,
+                          userInfo: ["newButtonGroupError": "group already defined"])
+        }
+    }
+    
+    override public func awakeFromNib() {
+        self.addTarget(self, action: #selector(buttonClicked(sender:)), for: UIControl.Event.touchUpInside)
+        
+    }
+    
+    @objc func buttonClicked(sender: UIButton) {
+        if sender == self {
+            isSelected = !isSelected
+        }
+    }
+    
+    func decorate() {
         if let val = self.styleAttr.type, let attribute = Palette.getAttribute(id: val) {
             
             self.styleAttr.attribute = attribute
@@ -95,4 +163,10 @@ public class AttributedButton: UIButton {
             }
         }
     }
+}
+
+public enum ButtonRoleType: Int {
+    case normal = 1
+    case radio = 2
+    case check = 3
 }

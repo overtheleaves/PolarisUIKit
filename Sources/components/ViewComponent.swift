@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AttributedView: UIView {
+class ViewComponent: UIView {
 
     @IBInspectable public var type: String? {
         get {
@@ -17,12 +17,12 @@ class AttributedView: UIView {
         set {
             if self.styleAttr.type != newValue {
                 self.styleAttr.type = newValue
-                initialize()
+                decorate()
             }
         }
     }
     
-    func initialize() {
+    func decorate() {
         if let val = self.styleAttr.type, let attribute = Palette.getAttribute(id: val) {
             
             self.styleAttr.attribute = attribute
