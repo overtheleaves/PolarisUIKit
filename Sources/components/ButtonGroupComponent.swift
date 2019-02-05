@@ -11,10 +11,6 @@ import UIKit
 public class ButtonGroupComponent: UIView {
 
     var buttons: [ButtonComponent] = []
-    let defaultButtonAttribute = StyleAttribute(textAttribute: nil,
-                                                fontAttribute: nil,
-                                                backgroundAttribute: BackgroundAttribute(color: UIColor.lightGray),
-                                                boxAttribute: BoxAttribute()) 
     
     override public init(frame: CGRect) {
         super.init(frame: frame)

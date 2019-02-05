@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         attr.textAttribute.color = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1)
         attr.boxAttribute.padding = CGFloat(10.0)
         attr.boxAttribute.borderRadius = 5.0
-        Palette.customAttribute["mylabel"] = attr
+        Palette.addAttribute("mylabel", attribute: attr)
         
         // myTextviewAttr
         let myTextviewAttr = StyleAttribute()
@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         myTextviewAttr.boxAttribute.borderRadius = 10.0
         myTextviewAttr.boxAttribute.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
         myTextviewAttr.boxAttribute.borderWidth = 2.0
-        Palette.customAttribute["myTextviewAttr"] = myTextviewAttr
+        Palette.addAttribute("myTextviewAttr", attribute: myTextviewAttr)
         
         // myTextfieldAttr
         let myTextfieldAttr = StyleAttribute()
@@ -45,13 +45,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         myTextfieldAttr.boxAttribute.shadowOpacity = 0.3
         myTextfieldAttr.boxAttribute.shadowRadius = 5
         myTextfieldAttr.boxAttribute.shadowOffset = CGSize(width: -1, height: 1)
-        Palette.customAttribute["myTextfieldAttr"] = myTextfieldAttr
+        Palette.addAttribute("myTextfieldAttr", attribute: myTextfieldAttr)
         
         let myViewAttr = StyleAttribute()
         myViewAttr.boxAttribute.shadowOpacity = 0.3
         myViewAttr.boxAttribute.shadowRadius = 5
         myViewAttr.boxAttribute.shadowOffset = CGSize(width: -1, height: 1)
-        Palette.customAttribute["myViewAttr"] = myViewAttr
+        Palette.addAttribute("myViewAttr", attribute: myViewAttr)
+        
+        let myCheckBtnAttrNormal = StyleAttribute()
+        myCheckBtnAttrNormal.textAttribute.color = UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1)
+        
+        let myCheckBtnAttrSelected = StyleAttribute()
+        myCheckBtnAttrSelected.textAttribute.color = UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1)
+        myCheckBtnAttrSelected.imageAttribute = ImageAttribute(image: (UIImage(named: "check")?.withRenderingMode(.alwaysOriginal))!)
+        
+        Palette.addAttribute("myCheckBtnAttr", attribute: myCheckBtnAttrNormal)
+        Palette.addAttribute("myCheckBtnAttr", attribute: myCheckBtnAttrSelected, linkState: .pressed)
         
         return true
     }

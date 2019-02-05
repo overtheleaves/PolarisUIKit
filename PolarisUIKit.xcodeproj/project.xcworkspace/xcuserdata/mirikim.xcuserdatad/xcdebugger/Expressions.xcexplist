@@ -3,6 +3,20 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "ButtonComponent.decorate():ButtonComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "iv.frame.height">
+            </PersistentString>
+            <PersistentString
+               value = "self.title(for: .normal)">
+            </PersistentString>
+            <PersistentString
+               value = "-(iv.frame.width + leftRightInset)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AttributedTextField.initialize():AttributedTextField.swift">
          <PersistentStrings>
             <PersistentString

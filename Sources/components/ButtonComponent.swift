@@ -10,6 +10,10 @@ import UIKit
 
 public class ButtonComponent: UIButton {
     
+    private let stateMapping:[LinkState:[State]] = [.normal: [.normal],
+                                            .hover: [.highlighted],
+                                            .pressed: [.selected],
+                                            .disabled: [.disabled]]
     public var buttonRoleType: ButtonRoleType = .normal
     public var buttonGroup: ButtonGroupComponent? {
         willSet {
@@ -30,10 +34,6 @@ public class ButtonComponent: UIButton {
                         group.notifyButtonSelectedChange(self)
                     }
                 }
-                
-                self.layer.backgroundColor = UIColor.red.cgColor
-            } else {
-                self.layer.backgroundColor = UIColor.gray.cgColor
             }
         }
     }
@@ -50,7 +50,7 @@ public class ButtonComponent: UIButton {
         }
     }
     
-    @IBInspectable public var type: String? {
+    @IBInspectable public var styleType: String? {
         get {
             return self.styleAttr.type
         }
@@ -73,7 +73,7 @@ public class ButtonComponent: UIButton {
     }
     
     private func newButtonGroup(group: ButtonGroupComponent?) throws {
-        guard group == nil else {
+        guard self.buttonGroup == nil else {
             throw NSError(domain: "ButtonComponent", code: 1,
                           userInfo: ["newButtonGroupError": "group already defined"])
         }
@@ -91,7 +91,12 @@ public class ButtonComponent: UIButton {
     }
     
     func decorate() {
-        if let val = self.styleAttr.type, let attribute = Palette.getAttribute(id: val) {
+        
+        
+        
+        // Stateless attribute
+        if let val = self.styleAttr.type,
+            let attribute = Palette.getAttribute(name: val, linkState: .normal) {
             
             self.styleAttr.attribute = attribute
  
@@ -102,28 +107,10 @@ public class ButtonComponent: UIButton {
                 label.font = attribute.fontAttribute.font
             }
             
-            
-            // Text Attribute
-            //
-            // - text color
-            self.setTitleColor(attribute.textAttribute.color, for: .normal)
-            
-            // - letter spacing
-            if let text = self.currentAttributedTitle {
-                let attrString = NSMutableAttributedString(attributedString: text)
-                attrString.addAttribute(NSAttributedString.Key.kern,
-                                        value: attribute.textAttribute.letterSpacing,
-                                        range: NSRange(location: 0, length: text.length))
-                self.setAttributedTitle(attrString.attributedSubstring(from: NSRange(location: 0, length: text.length)),
-                                        for: .normal)
-            }
-            
-            
             // Background Attribute
             //
             // - background color
             self.layer.backgroundColor = attribute.backgroundAttribute.color.cgColor
-            
             
             // Box Attribute
             //
@@ -139,12 +126,72 @@ public class ButtonComponent: UIButton {
             // - border
             self.layer.borderWidth = attribute.boxAttribute.borderWidth
             self.layer.borderColor = attribute.boxAttribute.borderColor.cgColor
-            
-            
-            //self.sizeToFit()
-            self.invalidateIntrinsicContentSize()
-            self.setNeedsDisplay()
         }
+        
+        // Stateful attribute
+        var imageWidthRatio: CGFloat? = nil
+        
+        if let val = self.styleAttr.type {
+            
+            for (linkState, uiStates) in stateMapping {
+                
+                if let attribute = Palette.getAttribute(name: val, linkState: linkState) {
+                    
+                    // UIControl.State
+                    for uiState in uiStates {
+                        
+                        // Text Attribute
+                        //
+                        // - text color
+                        self.setTitleColor(attribute.textAttribute.color, for: uiState)
+                        
+                        // - letter spacing
+                        if let text = self.currentAttributedTitle {
+                            let attrString = NSMutableAttributedString(attributedString: text)
+                            attrString.addAttribute(NSAttributedString.Key.kern,
+                                                    value: attribute.textAttribute.letterSpacing,
+                                                    range: NSRange(location: 0, length: text.length))
+                            self.setAttributedTitle(attrString.attributedSubstring(from: NSRange(location: 0, length: text.length)),
+                                                    for: uiState)
+                        }
+                        
+                        /// Image Attribute
+                        ///
+                        /// - image
+                        if let imageAttribute = attribute.imageAttribute,
+                            let image = imageAttribute.image {
+                            
+                            if imageWidthRatio == nil {
+                                imageWidthRatio = image.size.height / image.size.width
+                            }
+                            self.setImage(image, for: uiState)                            
+                        }
+                    }
+                }
+            }
+        }
+        
+        /// Image Attribute
+        if let iv = self.imageView,
+            let imageWidthRatio = imageWidthRatio {
+            
+            iv.frame = CGRect(x: 0, y: 0,
+                              width: self.frame.height * imageWidthRatio,
+                              height: self.frame.height)
+            
+            iv.contentMode = .scaleAspectFit
+            
+            let leftRightInset = iv.frame.width * 0.1    // 10% of width
+            let topBottomInset = iv.frame.height * 0.1   // 10% of height
+            
+            self.imageEdgeInsets = UIEdgeInsets(top: topBottomInset,
+                                                left: leftRightInset,
+                                                bottom: topBottomInset,
+                                                right: leftRightInset)
+        }
+        
+        self.tintColor = UIColor.clear
+        self.invalidateIntrinsicContentSize()
     }
     
     override public var intrinsicContentSize: CGSize {

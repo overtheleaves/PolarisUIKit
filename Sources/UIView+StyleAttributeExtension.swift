@@ -66,7 +66,7 @@ public extension UIView {
     }
     
     public func injectAttribute(attributeName: String) {
-        if let attribute = Palette.getAttribute(id: attributeName) {
+        if let attribute = Palette.getAttribute(name: attributeName) {
             self.styleAttr.attribute = attribute
         }
     }

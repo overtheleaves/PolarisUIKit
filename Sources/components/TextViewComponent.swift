@@ -23,7 +23,7 @@ class TextViewComponent: UITextView {
     }
     
     func decorate() {
-        if let val = self.styleAttr.type, let attribute = Palette.getAttribute(id: val) {
+        if let val = self.styleAttr.type, let attribute = Palette.getAttribute(name: val) {
             
             self.styleAttr.attribute = attribute
             

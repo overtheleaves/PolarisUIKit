@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+/// make LinkState hashable
+public func == (lhs: LinkState, rhs: LinkState) -> Bool {
+    return lhs.rawValue == rhs.rawValue
+}
+
 public class Palette {
     // color chip
     public static var backgroundColor: UIColor?
@@ -20,39 +25,55 @@ public class Palette {
         StyleAttribute(textAttribute: nil,
                        fontAttribute: FontAttribute(font: Palette.defaultFont.withSize(UIFont.systemFontSize * 2)), // 2em
                         backgroundAttribute: nil,
-                        boxAttribute: nil)
+                        boxAttribute: nil,
+                        imageAttribute: nil)
     public static var h2Attribute: StyleAttribute =
         StyleAttribute(textAttribute: nil,
                        fontAttribute: FontAttribute(font: Palette.defaultFont.withSize(UIFont.systemFontSize * 1.5)), // 1.5em
                         backgroundAttribute: nil,
-                        boxAttribute: nil)
+                        boxAttribute: nil,
+                        imageAttribute: nil)
     public static var h3Attribute: StyleAttribute =
         StyleAttribute(textAttribute: nil,
                        fontAttribute: FontAttribute(font: Palette.defaultFont.withSize(UIFont.systemFontSize * 1.17)), // 1.17em
                         backgroundAttribute: nil,
-                        boxAttribute: nil)
+                        boxAttribute: nil,
+                        imageAttribute: nil)
     public static var h4Attribute: StyleAttribute =
         StyleAttribute(textAttribute: nil,
                        fontAttribute: FontAttribute(font: Palette.defaultFont.withSize(UIFont.systemFontSize)), // 1em
                         backgroundAttribute: nil,
-                        boxAttribute: nil)
+                        boxAttribute: nil,
+                        imageAttribute: nil)
     public static var h5Attribute: StyleAttribute =
         StyleAttribute(textAttribute: nil,
                        fontAttribute: FontAttribute(font: Palette.defaultFont.withSize(UIFont.systemFontSize * 0.83)), // 0.83em
                         backgroundAttribute: nil,
-                        boxAttribute: nil)
+                        boxAttribute: nil,
+                        imageAttribute: nil)
     public static var h6Attribute: StyleAttribute =
         StyleAttribute(textAttribute: nil,
                        fontAttribute: FontAttribute(font: Palette.defaultFont.withSize(UIFont.systemFontSize * 0.67)), // 0.67em
                         backgroundAttribute: nil,
-                        boxAttribute: nil)
+                        boxAttribute: nil,
+                        imageAttribute: nil)
     public static var pAttribute: StyleAttribute =
         StyleAttribute(textAttribute: nil,
                        fontAttribute: FontAttribute(font: Palette.defaultFont.withSize(UIFont.systemFontSize)), // 1em
                         backgroundAttribute: nil,
-                        boxAttribute: nil)
+                        boxAttribute: nil,
+                        imageAttribute: nil)
     
-    public static var customAttribute: [String:StyleAttribute] = [:]
+    private static var customAttribute: [String:[LinkState:StyleAttribute]] = [:]
+    
+    public static func addAttribute(_ name: String, attribute: StyleAttribute, linkState: LinkState? = .normal) {
+      
+        if customAttribute[name] == nil {
+            customAttribute[name] = [:]
+        }
+        
+        customAttribute[name]![linkState!] = attribute
+    }
     
     public static func getAttribute(type: DefaultStyleAttributeType) -> StyleAttribute {
         switch type {
@@ -73,8 +94,8 @@ public class Palette {
         }
     }
     
-    public static func getAttribute(id: String) -> StyleAttribute? {
-        switch id {
+    public static func getAttribute(name: String, linkState: LinkState? = .normal) -> StyleAttribute? {
+        switch name {
         case DefaultStyleAttributeType.h1.rawValue:
             return h1Attribute
         case DefaultStyleAttributeType.h2.rawValue:
@@ -90,7 +111,11 @@ public class Palette {
         case DefaultStyleAttributeType.p.rawValue:
             return pAttribute
         default :
-            return customAttribute[id]
+            if let dict = customAttribute[name] {
+                return dict[linkState!]
+            } else {
+                return nil
+            }
         }
     }
     
@@ -129,20 +154,28 @@ public enum DefaultStyleAttributeType: String {
     case p = "p"
 }
 
-public class StyleAttribute {
+public enum LinkState: Int {
+    case normal
+    case hover
+    case pressed
+    case disabled
+}
 
+public class StyleAttribute {
     public var textAttribute: TextAttribute = TextAttribute()
     public var fontAttribute: FontAttribute = FontAttribute()
     public var backgroundAttribute: BackgroundAttribute = BackgroundAttribute()
     public var boxAttribute: BoxAttribute = BoxAttribute()
+    public var imageAttribute: ImageAttribute?
     
     public init() { }
     public init(textAttribute: TextAttribute?, fontAttribute: FontAttribute?,
-                backgroundAttribute: BackgroundAttribute?, boxAttribute: BoxAttribute?) {
+                backgroundAttribute: BackgroundAttribute?, boxAttribute: BoxAttribute?, imageAttribute: ImageAttribute?) {
         self.textAttribute = textAttribute ?? self.textAttribute
         self.fontAttribute = fontAttribute ?? self.fontAttribute
         self.backgroundAttribute = backgroundAttribute ?? self.backgroundAttribute
         self.boxAttribute = boxAttribute ?? self.boxAttribute
+        self.imageAttribute = imageAttribute
     }
 }
 
@@ -216,4 +249,14 @@ public class BoxAttribute {
     public var shadowOffset: CGSize = CGSize(width: 0, height: -3)
     public var shadowRadius: CGFloat = 3
     public var shadowOpacity: Float = 0.0
+}
+
+
+public class ImageAttribute {
+    public var image: UIImage?
+    
+    public init() { }
+    public init(image: UIImage) {
+        self.image = image
+    }
 }

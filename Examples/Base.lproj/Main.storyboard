@@ -146,28 +146,34 @@
                                         <rect key="frame" x="192" y="416" width="175" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPg-r1-IF2" customClass="ButtonComponent" customModule="PolarisUIKit" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="8" width="46" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPg-r1-IF2" customClass="ButtonComponent" customModule="PolarisUIKit" customModuleProvider="target">
+                                                <rect key="frame" x="22" y="7" width="131" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="check1"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="roleType" value="check"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="myCheckBtnAttr"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="myCheckBtnAttr"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ke-O3-G4u" customClass="ButtonComponent" customModule="PolarisUIKit" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="49" width="46" height="30"/>
+                                                <rect key="frame" x="6" y="49" width="161" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="check2"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="roleType" value="check"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="myCheckBtnAttr"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="myCheckBtnAttr"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77f-1b-66U" customClass="ButtonComponent" customModule="PolarisUIKit" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="87" width="46" height="30"/>
+                                                <rect key="frame" x="6" y="87" width="161" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="check3"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="roleType" value="check"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="myCheckBtnAttr"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="myCheckBtnAttr"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>

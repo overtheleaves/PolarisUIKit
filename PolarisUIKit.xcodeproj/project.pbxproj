@@ -10,6 +10,7 @@
 		FE55EB4E2207E67E0006DC2E /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB4D2207E67E0006DC2E /* TextFieldComponent.swift */; };
 		FE55EB5022083DB20006DC2E /* ViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB4F22083DB10006DC2E /* ViewComponent.swift */; };
 		FE55EB5322087CB70006DC2E /* ButtonGroupComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */; };
+		FE55EB5C2209EA810006DC2E /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = FE55EB5B2209EA810006DC2E /* check.png */; };
 		FED369E92205706100B4F2A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369E82205706100B4F2A8 /* AppDelegate.swift */; };
 		FED369EB2205706100B4F2A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369EA2205706100B4F2A8 /* ViewController.swift */; };
 		FED369EE2205706100B4F2A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED369EC2205706100B4F2A8 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		FE55EB4D2207E67E0006DC2E /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
 		FE55EB4F22083DB10006DC2E /* ViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponent.swift; sourceTree = "<group>"; };
 		FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupComponent.swift; sourceTree = "<group>"; };
+		FE55EB5B2209EA810006DC2E /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		FED369E52205706100B4F2A8 /* PolarisUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarisUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED369E82205706100B4F2A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED369EA2205706100B4F2A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,10 +69,19 @@
 			path = components;
 			sourceTree = "<group>";
 		};
+		FE55EB542209283C0006DC2E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE55EB5B2209EA810006DC2E /* check.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FED369DC2205706100B4F2A8 = {
 			isa = PBXGroup;
 			children = (
 				FED369FB220570E400B4F2A8 /* Package.swift */,
+				FE55EB542209283C0006DC2E /* Resources */,
 				FED369FA2205707400B4F2A8 /* Sources */,
 				FED369E72205706100B4F2A8 /* Examples */,
 				FED369E62205706100B4F2A8 /* Products */,
@@ -167,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE55EB5C2209EA810006DC2E /* check.png in Resources */,
 				FED369F32205706300B4F2A8 /* LaunchScreen.storyboard in Resources */,
 				FED369F02205706300B4F2A8 /* Assets.xcassets in Resources */,
 				FED369EE2205706100B4F2A8 /* Main.storyboard in Resources */,
