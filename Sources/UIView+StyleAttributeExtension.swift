@@ -17,9 +17,13 @@ extension UIView: StyleAttributeCompatible {
 }
 
 public extension StyleAttributeExtension where Base: UIView {
-    public var type: String? {
+    public var type: String {
         get {
-            return objc_getAssociatedObject(base, &AssociatedKeys.type) as? String
+            if let val = objc_getAssociatedObject(base, &AssociatedKeys.type) as? String {
+                return val
+            }
+            
+            return ""
         }
         
         set(newValue) {

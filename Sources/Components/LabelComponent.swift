@@ -10,7 +10,7 @@ import UIKit
 
 public class LabelComponent: UILabel {
     
-   @IBInspectable public var type: String? {
+   @IBInspectable public var styleType: String {
         get {
             return self.styleAttr.type
         }
@@ -23,7 +23,7 @@ public class LabelComponent: UILabel {
     }
     
     func decorate() {
-        if let val = self.styleAttr.type, let attribute = Palette.getAttribute(name: val) {
+        if let attribute = Palette.getAttribute(name: self.styleAttr.type) {
             
             self.styleAttr.attribute = attribute
             

@@ -54,10 +54,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Palette.addAttribute("myViewAttr", attribute: myViewAttr)
         
         let myCheckBtnAttrNormal = StyleAttribute()
-        myCheckBtnAttrNormal.textAttribute.color = UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1)
+        myCheckBtnAttrNormal.textAttribute.color = UIColor.white
+        myCheckBtnAttrNormal.fontAttribute.font = Palette.defaultFont
+        myCheckBtnAttrNormal.backgroundAttribute.color = UIColor(red: 0.6, green: 0.6, blue: 0.65, alpha: 1)
+        myCheckBtnAttrNormal.boxAttribute.borderRadius = 5.0
+        myCheckBtnAttrNormal.boxAttribute.padding = 10.0
         
         let myCheckBtnAttrSelected = StyleAttribute()
-        myCheckBtnAttrSelected.textAttribute.color = UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1)
+        myCheckBtnAttrSelected.textAttribute.color = UIColor.darkGray
         myCheckBtnAttrSelected.imageAttribute = ImageAttribute(image: (UIImage(named: "check")?.withRenderingMode(.alwaysOriginal))!)
         
         Palette.addAttribute("myCheckBtnAttr", attribute: myCheckBtnAttrNormal)

@@ -29,8 +29,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="polarisAttributeType" value="h1"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="h1"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="h1"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="H2 Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfb-Xm-XnK" customClass="LabelComponent" customModule="PolarisUIKit" customModuleProvider="target">
@@ -40,8 +39,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="polarisAttributeType" value="h2"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="h2"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="h2"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="H3 Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4V-9P-NNM" customClass="LabelComponent" customModule="PolarisUIKit" customModuleProvider="target">
@@ -51,8 +49,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="polarisAttributeType" value="h3"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="h3"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="h3"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="H4 Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5E-T8-sn4" customClass="LabelComponent" customModule="PolarisUIKit" customModuleProvider="target">
@@ -62,7 +59,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="h4"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="h4"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="H5 Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgW-ED-Rkv" customClass="LabelComponent" customModule="PolarisUIKit" customModuleProvider="target">
@@ -72,7 +69,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="h5"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="h5"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="H6 Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9l-88-gHh" customClass="LabelComponent" customModule="PolarisUIKit" customModuleProvider="target">
@@ -82,7 +79,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="h6"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="h6"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="P Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxg-Na-RGX" customClass="LabelComponent" customModule="PolarisUIKit" customModuleProvider="target">
@@ -92,7 +89,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="p"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="p"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mylabel (background=gray, textcolor = white)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tt-Zj-Ju3" customClass="LabelComponent" customModule="PolarisUIKit" customModuleProvider="target">
@@ -102,7 +99,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="mylabel"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="mylabel"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mUI-56-bnh" customClass="TextViewComponent" customModule="PolarisUIKit" customModuleProvider="target">
@@ -113,25 +110,25 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="myTextviewAttr"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="myTextviewAttr"/>
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MC1-2t-flN" customClass="ButtonComponent" customModule="PolarisUIKit" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="240" width="359" height="30"/>
+                                        <rect key="frame" x="8" y="240" width="121" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="mylabel"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="mylabel"/>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TEA-wG-ODz" customClass="TextFieldComponent" customModule="PolarisUIKit" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="359" width="176" height="30"/>
+                                        <rect key="frame" x="8" y="359" width="166" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="myTextfieldAttr"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="myTextfieldAttr"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NM3-Kf-Ve3" customClass="ViewComponent" customModule="PolarisUIKit" customModuleProvider="target">
@@ -139,7 +136,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="myViewAttr"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="myViewAttr"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uhQ-Si-RKC" customClass="ButtonGroupComponent" customModule="PolarisUIKit" customModuleProvider="target">
@@ -147,38 +144,46 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPg-r1-IF2" customClass="ButtonComponent" customModule="PolarisUIKit" customModuleProvider="target">
-                                                <rect key="frame" x="22" y="7" width="131" height="34"/>
+                                                <rect key="frame" x="8" y="7" width="159" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="check1"/>
+                                                <state key="normal" title="check box1"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="roleType" value="check"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="myCheckBtnAttr"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="myCheckBtnAttr"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ke-O3-G4u" customClass="ButtonComponent" customModule="PolarisUIKit" customModuleProvider="target">
-                                                <rect key="frame" x="6" y="49" width="161" height="30"/>
+                                                <rect key="frame" x="7" y="49" width="161" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="check2"/>
+                                                <state key="normal" title="check box2"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="roleType" value="check"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="myCheckBtnAttr"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="myCheckBtnAttr"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77f-1b-66U" customClass="ButtonComponent" customModule="PolarisUIKit" customModuleProvider="target">
-                                                <rect key="frame" x="6" y="87" width="161" height="30"/>
+                                                <rect key="frame" x="7" y="87" width="161" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="check3"/>
+                                                <state key="normal" title="check box3"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="roleType" value="check"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="myCheckBtnAttr"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="myCheckBtnAttr"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBb-SO-fgB" customClass="ButtonComponent" customModule="PolarisUIKit" customModuleProvider="target">
+                                        <rect key="frame" x="219" y="240" width="121" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Show Notification"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleType" value="mylabel"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="showNotification:" destination="BYZ-38-t0r" eventType="touchDown" id="0Xi-sT-g0c"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>

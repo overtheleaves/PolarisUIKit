@@ -11,6 +11,7 @@
 		FE55EB5022083DB20006DC2E /* ViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB4F22083DB10006DC2E /* ViewComponent.swift */; };
 		FE55EB5322087CB70006DC2E /* ButtonGroupComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */; };
 		FE55EB5C2209EA810006DC2E /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = FE55EB5B2209EA810006DC2E /* check.png */; };
+		FE55EB5E220B31480006DC2E /* NotificationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB5D220B31480006DC2E /* NotificationWidget.swift */; };
 		FED369E92205706100B4F2A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369E82205706100B4F2A8 /* AppDelegate.swift */; };
 		FED369EB2205706100B4F2A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369EA2205706100B4F2A8 /* ViewController.swift */; };
 		FED369EE2205706100B4F2A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED369EC2205706100B4F2A8 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		FE55EB4F22083DB10006DC2E /* ViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponent.swift; sourceTree = "<group>"; };
 		FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupComponent.swift; sourceTree = "<group>"; };
 		FE55EB5B2209EA810006DC2E /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		FE55EB5D220B31480006DC2E /* NotificationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationWidget.swift; sourceTree = "<group>"; };
 		FED369E52205706100B4F2A8 /* PolarisUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarisUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED369E82205706100B4F2A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED369EA2205706100B4F2A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FE55EB5122087A360006DC2E /* components */ = {
+		FE55EB5122087A360006DC2E /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				FED36A05220711CA00B4F2A8 /* LabelComponent.swift */,
@@ -66,7 +68,7 @@
 				FE55EB4F22083DB10006DC2E /* ViewComponent.swift */,
 				FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */,
 			);
-			path = components;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FE55EB542209283C0006DC2E /* Resources */ = {
@@ -75,6 +77,14 @@
 				FE55EB5B2209EA810006DC2E /* check.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE55EB5F220B331B0006DC2E /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				FE55EB5D220B31480006DC2E /* NotificationWidget.swift */,
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 		FED369DC2205706100B4F2A8 = {
@@ -115,7 +125,8 @@
 				FED369FD2205715900B4F2A8 /* Palette.swift */,
 				FED369FF220571AE00B4F2A8 /* StyleAttributeCompatible.swift */,
 				FED36A01220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift */,
-				FE55EB5122087A360006DC2E /* components */,
+				FE55EB5F220B331B0006DC2E /* Widgets */,
+				FE55EB5122087A360006DC2E /* Components */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -200,6 +211,7 @@
 				FE55EB5322087CB70006DC2E /* ButtonGroupComponent.swift in Sources */,
 				FED36A0A2207D35100B4F2A8 /* TextViewComponent.swift in Sources */,
 				FED36A02220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift in Sources */,
+				FE55EB5E220B31480006DC2E /* NotificationWidget.swift in Sources */,
 				FED369E92205706100B4F2A8 /* AppDelegate.swift in Sources */,
 				FED36A00220571AE00B4F2A8 /* StyleAttributeCompatible.swift in Sources */,
 				FED36A082207461100B4F2A8 /* ButtonComponent.swift in Sources */,

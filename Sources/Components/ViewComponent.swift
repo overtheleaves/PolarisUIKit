@@ -10,7 +10,7 @@ import UIKit
 
 class ViewComponent: UIView {
 
-    @IBInspectable public var type: String? {
+    @IBInspectable public var styleType: String {
         get {
             return self.styleAttr.type
         }
@@ -21,9 +21,9 @@ class ViewComponent: UIView {
             }
         }
     }
-    
+        
     func decorate() {
-        if let val = self.styleAttr.type, let attribute = Palette.getAttribute(name: val) {
+        if let attribute = Palette.getAttribute(name: self.styleAttr.type) {
             
             self.styleAttr.attribute = attribute
             

@@ -17,6 +17,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "NotificationWidget.init(header:content:attribute:):NotificationWidget.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AttributedTextField.initialize():AttributedTextField.swift">
          <PersistentStrings>
             <PersistentString
