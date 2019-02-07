@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  PolarisUIKit
 //
-//  Created by mirikim on 02/02/2019.
+//  Created by overtheleaves on 02/02/2019.
 //  Copyright © 2019 overtheleaves. All rights reserved.
 //
 
@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var loadingIndicator: LoadingIndicatorComponent!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
         self.stackView.trailingAnchor.constraint(equalTo: self.scrollView.trailingAnchor).isActive = true
         
         self.stackView.widthAnchor.constraint(equalTo: self.scrollView.widthAnchor).isActive = true
+        
+        loadingIndicator.start()
     }
     
     @IBAction func showNotification(_ sender: Any) {
@@ -43,6 +46,14 @@ class ViewController: UIViewController {
                                                     content: "This is your notification contents!\nYou successfully read this notification :)",
                                                     attribute: attr)
         notificationWidget.show(self, period: .LONG)
+    }
+    
+    @IBAction func showPopup(_ sender: Any) {
+        
+        let popupWidget = PopupWidget(header: "Header!",
+                                      content: "This is your popup contents!\nYou successfully read this notification :)",
+                                      attribute: nil)
+        popupWidget.show(self)
     }
 }
 

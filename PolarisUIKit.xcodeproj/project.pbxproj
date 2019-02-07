@@ -22,6 +22,9 @@
 		FED36A082207461100B4F2A8 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A072207461100B4F2A8 /* ButtonComponent.swift */; };
 		FED36A0A2207D35100B4F2A8 /* TextViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A092207D35100B4F2A8 /* TextViewComponent.swift */; };
 		FED6F9E9220BD53C005C9944 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED6F9E8220BD53C005C9944 /* ViewController.xib */; };
+		FED6F9EB220C0722005C9944 /* LoadingIndicatorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED6F9EA220C0722005C9944 /* LoadingIndicatorComponent.swift */; };
+		FED6F9ED220C4EC8005C9944 /* PopupWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED6F9EC220C4EC8005C9944 /* PopupWidget.swift */; };
+		FED6F9EF220C7933005C9944 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = FED6F9EE220C7933005C9944 /* close.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		FED36A072207461100B4F2A8 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		FED36A092207D35100B4F2A8 /* TextViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewComponent.swift; sourceTree = "<group>"; };
 		FED6F9E8220BD53C005C9944 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		FED6F9EA220C0722005C9944 /* LoadingIndicatorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorComponent.swift; sourceTree = "<group>"; };
+		FED6F9EC220C4EC8005C9944 /* PopupWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupWidget.swift; sourceTree = "<group>"; };
+		FED6F9EE220C7933005C9944 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 				FE55EB4D2207E67E0006DC2E /* TextFieldComponent.swift */,
 				FE55EB4F22083DB10006DC2E /* ViewComponent.swift */,
 				FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */,
+				FED6F9EA220C0722005C9944 /* LoadingIndicatorComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -72,6 +79,7 @@
 		FE55EB542209283C0006DC2E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FED6F9EE220C7933005C9944 /* close.png */,
 				FE55EB5B2209EA810006DC2E /* check.png */,
 			);
 			path = Resources;
@@ -81,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				FE55EB5D220B31480006DC2E /* NotificationWidget.swift */,
+				FED6F9EC220C4EC8005C9944 /* PopupWidget.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -188,6 +197,7 @@
 			files = (
 				FED6F9E9220BD53C005C9944 /* ViewController.xib in Resources */,
 				FE55EB5C2209EA810006DC2E /* check.png in Resources */,
+				FED6F9EF220C7933005C9944 /* close.png in Resources */,
 				FED369F02205706300B4F2A8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,9 +217,11 @@
 				FE55EB5322087CB70006DC2E /* ButtonGroupComponent.swift in Sources */,
 				FED36A0A2207D35100B4F2A8 /* TextViewComponent.swift in Sources */,
 				FED36A02220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift in Sources */,
+				FED6F9ED220C4EC8005C9944 /* PopupWidget.swift in Sources */,
 				FE55EB5E220B31480006DC2E /* NotificationWidget.swift in Sources */,
 				FED369E92205706100B4F2A8 /* AppDelegate.swift in Sources */,
 				FED36A00220571AE00B4F2A8 /* StyleAttributeCompatible.swift in Sources */,
+				FED6F9EB220C0722005C9944 /* LoadingIndicatorComponent.swift in Sources */,
 				FED36A082207461100B4F2A8 /* ButtonComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

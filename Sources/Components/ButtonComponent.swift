@@ -217,8 +217,10 @@ public class ButtonComponent: UIButton {
             
             iv.contentMode = .scaleAspectFit
             
-            self.titleEdgeInsets = UIEdgeInsets(top: 0, left: imageTitleGap, bottom: 0, right: -imageTitleGap)
-            self.contentEdgeInsets.right += imageTitleGap
+            if title(for: .normal) != nil {
+                self.titleEdgeInsets = UIEdgeInsets(top: 0, left: imageTitleGap, bottom: 0, right: -imageTitleGap)
+                self.contentEdgeInsets.right += imageTitleGap
+            }
         }
         
         self.tintColor = UIColor.clear

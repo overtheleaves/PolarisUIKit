@@ -11,12 +11,12 @@ import Foundation
 
 public class NotificationWidget {
     
-    var headerLabel: UILabel? = nil
-    var contentLabel: UILabel
+    private var headerLabel: UILabel? = nil
+    private var contentLabel: UILabel
     
-    let view: UIView
-    let headerContentGap: CGFloat = 10.0
-    let animationDuration: TimeInterval = 0.3
+    private let view: UIView
+    private let headerContentGap: CGFloat = 10.0
+    private let animationDuration: TimeInterval = 0.3
     
     public init(header: String?, content: String, attribute: StyleAttribute?) {
         
@@ -53,6 +53,7 @@ public class NotificationWidget {
                                  height: h.frame.height)
                 
                 h.textColor = attr.textAttribute.color
+                h.font = attr.fontAttribute.font
                 totalHeight += h.frame.height
             }
             
@@ -64,6 +65,7 @@ public class NotificationWidget {
                                             - attr.boxAttribute.paddingRight,
                                         height: contentLabel.frame.height)
             contentLabel.textColor = attr.textAttribute.color
+            contentLabel.font = attr.fontAttribute.font
             contentLabel.sizeToFit()
             totalHeight += contentLabel.frame.height
             
@@ -82,7 +84,7 @@ public class NotificationWidget {
         }
     }
     
-    public func show(_ target: UIViewController, period time: NotificationPeriodTime, direction: NotificationShowDirection? = .FromTop) {
+    public func show(_ target: UIViewController, period time: PeriodTime, direction: ShowDirection? = .FromTop) {
         
         let visibleFrame = view.frame
         var hiddenFrame: CGRect? = nil
@@ -129,16 +131,17 @@ public class NotificationWidget {
             })
         })
     }
-}
+    
+    public enum PeriodTime: Int {
+        case LONG = 3000
+        case SHORT = 1000
+    }
+    
+    public enum ShowDirection {
+        case FromTop
+        case FromBottom
+        case FromLeft
+        case FromRight
+    }
 
-public enum NotificationPeriodTime: Int {
-    case LONG = 3000
-    case SHORT = 1000
-}
-
-public enum NotificationShowDirection {
-    case FromTop
-    case FromBottom
-    case FromLeft
-    case FromRight
 }

@@ -25,6 +25,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "PopupWidget.init(header:content:attribute:):PopupWidget.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "closeButton.frame.origin.y">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AttributedTextField.initialize():AttributedTextField.swift">
          <PersistentStrings>
             <PersistentString
@@ -41,13 +49,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "AttributedUILabel.drawText(in:):AttributedUILabel.swift">
+         contextName = "AttributedView.initialize():AttributedView.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.styleAttr.attribute">
-            </PersistentString>
-            <PersistentString
-               value = "self.styleAttr.type">
+               value = "decorateLayer.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -60,18 +65,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "AttributedView.initialize():AttributedView.swift">
+         contextName = "AttributedUILabel.drawText(in:):AttributedUILabel.swift">
          <PersistentStrings>
             <PersistentString
-               value = "decorateLayer.frame">
+               value = "self.styleAttr.attribute">
+            </PersistentString>
+            <PersistentString
+               value = "self.styleAttr.type">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "BoxAttribute.padding.didset:Palette.swift">
+         contextName = "closure #1 in LoadingIndicatorComponent.run(rotateDegree:step:totalStep:):LoadingIndicatorComponent.swift">
          <PersistentStrings>
             <PersistentString
-               value = "padding">
+               value = "CGFloat.pi / 180 * rotateDegree">
+            </PersistentString>
+            <PersistentString
+               value = "CGFloat(CGFloat.pi / 180 * rotateDegree)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -80,6 +91,14 @@
          <PersistentStrings>
             <PersistentString
                value = "super.contentRect(forBounds: bounds)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BoxAttribute.padding.didset:Palette.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "padding">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
