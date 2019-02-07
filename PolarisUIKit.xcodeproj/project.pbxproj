@@ -14,15 +14,14 @@
 		FE55EB5E220B31480006DC2E /* NotificationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB5D220B31480006DC2E /* NotificationWidget.swift */; };
 		FED369E92205706100B4F2A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369E82205706100B4F2A8 /* AppDelegate.swift */; };
 		FED369EB2205706100B4F2A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369EA2205706100B4F2A8 /* ViewController.swift */; };
-		FED369EE2205706100B4F2A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED369EC2205706100B4F2A8 /* Main.storyboard */; };
 		FED369F02205706300B4F2A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED369EF2205706300B4F2A8 /* Assets.xcassets */; };
-		FED369F32205706300B4F2A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED369F12205706300B4F2A8 /* LaunchScreen.storyboard */; };
 		FED369FE2205715900B4F2A8 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369FD2205715900B4F2A8 /* Palette.swift */; };
 		FED36A00220571AE00B4F2A8 /* StyleAttributeCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369FF220571AE00B4F2A8 /* StyleAttributeCompatible.swift */; };
 		FED36A02220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A01220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift */; };
 		FED36A06220711CA00B4F2A8 /* LabelComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A05220711CA00B4F2A8 /* LabelComponent.swift */; };
 		FED36A082207461100B4F2A8 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A072207461100B4F2A8 /* ButtonComponent.swift */; };
 		FED36A0A2207D35100B4F2A8 /* TextViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A092207D35100B4F2A8 /* TextViewComponent.swift */; };
+		FED6F9E9220BD53C005C9944 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED6F9E8220BD53C005C9944 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +33,7 @@
 		FED369E52205706100B4F2A8 /* PolarisUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarisUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED369E82205706100B4F2A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED369EA2205706100B4F2A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FED369ED2205706100B4F2A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FED369EF2205706300B4F2A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FED369F22205706300B4F2A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FED369F42205706300B4F2A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FED369FB220570E400B4F2A8 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		FED369FD2205715900B4F2A8 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
@@ -45,6 +42,7 @@
 		FED36A05220711CA00B4F2A8 /* LabelComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelComponent.swift; sourceTree = "<group>"; };
 		FED36A072207461100B4F2A8 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		FED36A092207D35100B4F2A8 /* TextViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewComponent.swift; sourceTree = "<group>"; };
+		FED6F9E8220BD53C005C9944 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +109,8 @@
 			children = (
 				FED369E82205706100B4F2A8 /* AppDelegate.swift */,
 				FED369EA2205706100B4F2A8 /* ViewController.swift */,
-				FED369EC2205706100B4F2A8 /* Main.storyboard */,
+				FED6F9E8220BD53C005C9944 /* ViewController.xib */,
 				FED369EF2205706300B4F2A8 /* Assets.xcassets */,
-				FED369F12205706300B4F2A8 /* LaunchScreen.storyboard */,
 				FED369F42205706300B4F2A8 /* Info.plist */,
 			);
 			path = Examples;
@@ -189,10 +186,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED6F9E9220BD53C005C9944 /* ViewController.xib in Resources */,
 				FE55EB5C2209EA810006DC2E /* check.png in Resources */,
-				FED369F32205706300B4F2A8 /* LaunchScreen.storyboard in Resources */,
 				FED369F02205706300B4F2A8 /* Assets.xcassets in Resources */,
-				FED369EE2205706100B4F2A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,25 +215,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FED369EC2205706100B4F2A8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FED369ED2205706100B4F2A8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FED369F12205706300B4F2A8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FED369F22205706300B4F2A8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FED369F52205706300B4F2A8 /* Debug */ = {

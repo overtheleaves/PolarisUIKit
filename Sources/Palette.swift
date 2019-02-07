@@ -14,10 +14,37 @@ public func == (lhs: LinkState, rhs: LinkState) -> Bool {
 }
 
 public class Palette {
-    // color chip
-    public static var backgroundColor: UIColor?
-    public static var themeColor: UIColor?
-    public static var shadowColor: UIColor?
+    
+    // color scheme
+    public static let lightGreen: UIColor = UIColor(red: 105/255, green: 224/255, blue: 161/255, alpha: 1.0)
+    public static let green: UIColor = UIColor(red: 67/255, green: 203/255, blue: 131/255, alpha: 1.0)
+    public static let darkGreen: UIColor = UIColor(red: 45/255, green: 168/255, blue: 103/255, alpha: 1.0)
+    
+    public static let lightBlue: UIColor = UIColor(red: 113/255, green: 207/255, blue: 243/255, alpha: 1.0)
+    public static let blue: UIColor = UIColor(red: 80/255, green: 186/255, blue: 226/255, alpha: 1.0)
+    public static let darkBlue: UIColor = UIColor(red: 58/255, green: 158/255, blue: 195/255, alpha: 1.0)
+    
+    public static let lightRed: UIColor = UIColor(red: 251/255, green: 136/255, blue: 103/255, alpha: 1.0)
+    public static let red: UIColor = UIColor(red: 245/255, green: 120/255, blue: 70/255, alpha: 1.0)
+    public static let darkRed: UIColor = UIColor(red: 219/255, green: 99/255, blue: 52/255, alpha: 1.0)
+
+    public static let lightOrange: UIColor = UIColor(red: 253/255, green: 204/255, blue: 126/255, alpha: 1.0)
+    public static let orange: UIColor = UIColor(red: 249/255, green: 185/255, blue: 74/255, alpha: 1.0)
+    public static let darkOrange: UIColor = UIColor(red: 231/255, green: 161/255, blue: 51/255, alpha: 1.0)
+
+    public static let lightViolet: UIColor = UIColor(red: 142/255, green: 142/255, blue: 243/255, alpha: 1.0)
+    public static let violet: UIColor = UIColor(red: 112/255, green: 112/255, blue: 239/255, alpha: 1.0)
+    public static let darkViolet: UIColor = UIColor(red: 84/255, green: 84/255, blue: 205/255, alpha: 1.0)
+
+    public static let lightDark: UIColor = UIColor(red: 81/255, green: 81/255, blue: 99/255, alpha: 1.0)
+    public static let dark: UIColor = UIColor(red: 63/255, green: 63/255, blue: 77/255, alpha: 1.0)
+    public static let veryDark: UIColor = UIColor(red: 48/255, green: 48/255, blue: 60/255, alpha: 1.0)
+
+    public static let lightGray: UIColor = UIColor(red: 244/255, green: 245/255, blue: 249/255, alpha: 1.0)
+    public static let gray: UIColor = UIColor(red: 221/255, green: 226/255, blue: 239/255, alpha: 1.0)
+    public static let darkGray: UIColor = UIColor(red: 192/255, green: 199/255, blue: 218/255, alpha: 1.0)
+
+    public static let text: UIColor = UIColor(red: 87/255, green: 96/255, blue: 119/255, alpha: 1.0)
     
     public static var defaultFont = UIFont.systemFont(ofSize: UIFont.systemFontSize)
     
@@ -191,7 +218,7 @@ public class TextAttribute {
 }
 
 public class FontAttribute {
-    public var font: UIFont = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+    public var font: UIFont = Palette.defaultFont
     
     public init() { }
     public init (font: UIFont) {

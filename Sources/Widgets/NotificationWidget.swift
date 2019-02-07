@@ -13,8 +13,10 @@ public class NotificationWidget {
     
     var headerLabel: UILabel? = nil
     var contentLabel: UILabel
+    
     let view: UIView
     let headerContentGap: CGFloat = 10.0
+    let animationDuration: TimeInterval = 0.3
     
     public init(header: String?, content: String, attribute: StyleAttribute?) {
         
@@ -41,6 +43,7 @@ public class NotificationWidget {
             
             var totalHeight: CGFloat = 0.0
             
+            /// header setting
             if let h = headerLabel {
                 h.frame = CGRect(x: attr.boxAttribute.paddingLeft,
                                  y: attr.boxAttribute.paddingTop,
@@ -53,6 +56,7 @@ public class NotificationWidget {
                 totalHeight += h.frame.height
             }
             
+            /// content setting
             contentLabel.frame = CGRect(x: attr.boxAttribute.paddingLeft,
                                         y: headerHeight + headerContentGap,
                                         width: UIScreen.main.bounds.width
@@ -63,12 +67,13 @@ public class NotificationWidget {
             contentLabel.sizeToFit()
             totalHeight += contentLabel.frame.height
             
+            /// background view setting
             view.frame = CGRect(x: attr.boxAttribute.marginLeft,
                                 y: attr.boxAttribute.marginTop,
                                 width: UIScreen.main.bounds.width
                                     - attr.boxAttribute.marginLeft
                                     - attr.boxAttribute.marginRight,
-                                height: totalHeight
+                                height: totalHeight     // header height + content height
                                     + attr.boxAttribute.paddingTop
                                     + attr.boxAttribute.paddingBottom)
             
@@ -77,22 +82,48 @@ public class NotificationWidget {
         }
     }
     
-    public func show(_ target: UIViewController, time: NotificationShowTime) {
+    public func show(_ target: UIViewController, period time: NotificationPeriodTime, direction: NotificationShowDirection? = .FromTop) {
         
-        self.view.removeFromSuperview()
+        let visibleFrame = view.frame
+        var hiddenFrame: CGRect? = nil
         
-        let originalFrame = view.frame
         target.view.addSubview(view)
-        view.frame.origin.y = -view.frame.height
         
-        UIView.animate(withDuration: 0.3) {
-            self.view.frame = originalFrame
+        // set animation hidden frame (outside of main screen)
+        if let direction = direction {
+            switch direction {
+            case .FromTop:
+                hiddenFrame = CGRect(origin: CGPoint(x: visibleFrame.origin.x,
+                                                     y: -visibleFrame.height),
+                                     size: visibleFrame.size)
+            case .FromBottom:
+                hiddenFrame = CGRect(origin: CGPoint(x: visibleFrame.origin.x,
+                                                     y: UIScreen.main.bounds.height),
+                                     size: visibleFrame.size)
+            case .FromLeft:
+                hiddenFrame = CGRect(origin: CGPoint(x: -visibleFrame.width,
+                                                     y: visibleFrame.origin.y),
+                                     size: visibleFrame.size)
+            case .FromRight:
+                hiddenFrame = CGRect(origin: CGPoint(x: UIScreen.main.bounds.width,
+                                                     y: visibleFrame.origin.y),
+                                     size: visibleFrame.size)
+            }
         }
         
+        // 1. hide notification
+        self.view.frame = hiddenFrame!
+        
+        // 2. show notification
+        UIView.animate(withDuration: animationDuration) {
+            self.view.frame = visibleFrame
+        }
+        
+        // 3. hide notification after period time
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(time.rawValue), execute: {
             
-            UIView.animate(withDuration: 0.3, animations: {
-                self.view.frame.origin.y = -originalFrame.height
+            UIView.animate(withDuration: self.animationDuration, animations: {
+                self.view.frame = hiddenFrame!
             }, completion: { (success) in
                 self.view.removeFromSuperview()
             })
@@ -100,7 +131,7 @@ public class NotificationWidget {
     }
 }
 
-public enum NotificationShowTime: Int {
+public enum NotificationPeriodTime: Int {
     case LONG = 3000
     case SHORT = 1000
 }
