@@ -10,6 +10,32 @@ import UIKit
 
 public class PopupWidget {
     
+    public typealias CloseHandler = () -> Void
+    public typealias CompleteHandler = (Bool) -> Void
+    public static var isModalOpen: Bool = false
+    
+    private static var widget: InternalPopupWidget?
+    
+    public static func show(_ target: UIViewController,
+                            header: String?,
+                            content: String,
+                            attribute: StyleAttribute?,
+                            close: CloseHandler? = nil,
+                            completion: CompleteHandler? = nil) -> Bool {
+        
+        if PopupWidget.isModalOpen {
+            return false
+        }
+        
+        widget = InternalPopupWidget(header: header, content: content, attribute: attribute)
+        widget!.show(target, close: close, completion: completion)
+        
+        return true
+    }
+}
+
+class InternalPopupWidget {
+   
     public var okTitle: String = "OK"
     public var cancelTitle: String? = "Cancel"
     public var okButtonColor: UIColor = Palette.blue
@@ -18,14 +44,19 @@ public class PopupWidget {
     private let view: UIView = UIView()
     private var headerLabel: UILabel? = nil
     private let contentLabel: UILabel = UILabel()
-    private let okButton: UIButton = UIButton()
+    private let okButton: UIButton = UIButton(type: .custom)
     private var cancelButton: UIButton? = nil
-    private var closeButton: UIButton = UIButton()
+    private var closeButton: UIButton = UIButton(type: .custom)
     
     private let headerContentGap: CGFloat = 10.0
     private let contentButtonGap: CGFloat = 20.0
-    private let animationDuration: TimeInterval = 0.3
+    private let okCancelButtonGap: CGFloat = 10.0
+    private let buttonLeftRightPadding: CGFloat = 10.0
+    private let animationDuration: TimeInterval = 0.4
     private var totalHeight: CGFloat = 0.0
+    
+    private var closeHandler: PopupWidget.CloseHandler?
+    private var completeHandler: PopupWidget.CompleteHandler?
     
     private let attribute: StyleAttribute
     
@@ -104,9 +135,12 @@ public class PopupWidget {
         /// button setting
         okButton.setTitle(okTitle, for: .normal)
         okButton.sizeToFit()
-        self.okButton.frame = CGRect(x: viewWidth - attr.boxAttribute.paddingRight - okButton.frame.width - 20.0,
+        self.okButton.frame = CGRect(x: viewWidth
+                                        - attr.boxAttribute.paddingRight
+                                        - okButton.frame.width
+                                        - buttonLeftRightPadding * 2,
                                      y: totalHeight + contentButtonGap,
-                                     width: self.okButton.frame.width + 20.0,   // padding 20
+                                     width: self.okButton.frame.width + buttonLeftRightPadding * 2,   // padding 20
                                     height: self.okButton.frame.height)
         totalHeight += (okButton.frame.height + contentButtonGap)
         
@@ -123,16 +157,24 @@ public class PopupWidget {
         view.backgroundColor = attr.backgroundAttribute.color
         view.layer.cornerRadius = attr.boxAttribute.borderRadius
         
-        
         /// close button
         /// top right side of the view.
         closeButton.frame.origin.x = self.view.frame.width
             - attr.boxAttribute.paddingRight
             - closeButton.frame.width
         closeButton.frame.origin.y = attr.boxAttribute.paddingTop
+        
+        /// event handler
+        closeButton.addTarget(self, action: #selector(close(_:)), for: .touchUpInside)
     }
     
-    public func show(_ target: UIViewController) {
+    public func show(_ target: UIViewController, close: PopupWidget.CloseHandler? = nil, completion: PopupWidget.CompleteHandler? = nil) {
+        
+        PopupWidget.isModalOpen = true
+        
+        self.closeHandler = close
+        self.completeHandler = completion
+        
         // button setting
         var cornerRadius = attribute.boxAttribute.borderRadius
         if attribute.boxAttribute.borderRadius > self.okButton.frame.height / 2 {
@@ -146,7 +188,7 @@ public class PopupWidget {
         self.view.addSubview(self.okButton)
         
         if let cancelTitle = self.cancelTitle {
-            self.cancelButton = UIButton()
+            self.cancelButton = UIButton(type: .custom)
             self.cancelButton?.setTitle(cancelTitle, for: .normal)
             self.cancelButton?.backgroundColor = self.cancelButtonColor
             self.cancelButton?.titleLabel!.font = attribute.fontAttribute.font
@@ -155,10 +197,13 @@ public class PopupWidget {
             
             // cancel is left of the ok button
             self.cancelButton?.frame = CGRect(x: self.okButton.frame.origin.x
-                - self.cancelButton!.frame.width - 10.0 - 20.0,
+                                                - self.cancelButton!.frame.width
+                                                - okCancelButtonGap
+                                                - buttonLeftRightPadding * 2,
                                               y: self.okButton.frame.origin.y,
-                                              width: self.cancelButton!.frame.width + 20.0,
-                                              height: self.cancelButton!.frame.height)
+                                              width: self.cancelButton!.frame.width
+                                                + buttonLeftRightPadding * 2,
+                                              height: self.okButton.frame.height)
             
             self.view.addSubview(self.cancelButton!)
         }
@@ -171,9 +216,15 @@ public class PopupWidget {
                                  height: originalFrame.height)
         target.view.addSubview(self.view)
         
+        /// event handler
+        okButton.addTarget(self, action: #selector(pressOk) , for: .touchUpInside)
+        if let btn = cancelButton {
+            btn.addTarget(self, action: #selector(pressCancel), for: .touchUpInside)
+        }
+        
         UIView.animate(withDuration: animationDuration,
                        delay: 0,
-                       usingSpringWithDamping: 1,
+                       usingSpringWithDamping: 0.5,
                        initialSpringVelocity: 0.3,
                        options: [],
                        animations: {
@@ -182,7 +233,30 @@ public class PopupWidget {
         }, completion: nil)
     }
     
-    public func close() {
+    @objc func close(_ sender: UIButton?) {
+        if let handler = self.closeHandler {
+            handler()
+        }
+        
+        PopupWidget.isModalOpen = false
+        self.view.removeFromSuperview()
+    }
+    
+    @objc func pressOk() {
+        if let handler = self.completeHandler {
+            handler(true)
+        }
+        
+        PopupWidget.isModalOpen = false
+        self.view.removeFromSuperview()
+    }
+    
+    @objc func pressCancel() {
+        if let handler = self.completeHandler {
+            handler(false)
+        }
+        
+        PopupWidget.isModalOpen = false
         self.view.removeFromSuperview()
     }
 }

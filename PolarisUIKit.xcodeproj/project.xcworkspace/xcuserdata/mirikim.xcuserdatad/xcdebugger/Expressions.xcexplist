@@ -3,40 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "ButtonComponent.decorate():ButtonComponent.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "iv.frame.height">
-            </PersistentString>
-            <PersistentString
-               value = "self.title(for: .normal)">
-            </PersistentString>
-            <PersistentString
-               value = "-(iv.frame.width + leftRightInset)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "NotificationWidget.init(header:content:attribute:):NotificationWidget.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "view.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "PopupWidget.init(header:content:attribute:):PopupWidget.swift">
          <PersistentStrings>
             <PersistentString
-               value = "closeButton.frame.origin.y">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "AttributedTextField.initialize():AttributedTextField.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "boxLayer.frame">
+               value = "closeButton.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -49,29 +19,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "AttributedView.initialize():AttributedView.swift">
+         contextName = "PopupWidget.show(_:close:completion:):PopupWidget.swift">
          <PersistentStrings>
             <PersistentString
-               value = "decorateLayer.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "AttributedButton.type.setter:AttributedButton.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.titleEdgeInsets">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "AttributedUILabel.drawText(in:):AttributedUILabel.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.styleAttr.attribute">
+               value = "okButton.frame">
             </PersistentString>
             <PersistentString
-               value = "self.styleAttr.type">
+               value = "view.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -87,10 +41,29 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "AttributedButton.contentRect(forBounds:):AttributedButton.swift">
+         contextName = "AttributedUILabel.drawText(in:):AttributedUILabel.swift">
          <PersistentStrings>
             <PersistentString
-               value = "super.contentRect(forBounds: bounds)">
+               value = "self.styleAttr.attribute">
+            </PersistentString>
+            <PersistentString
+               value = "self.styleAttr.type">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AttributedTextField.initialize():AttributedTextField.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "boxLayer.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AttributedView.initialize():AttributedView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "decorateLayer.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -99,6 +72,44 @@
          <PersistentStrings>
             <PersistentString
                value = "padding">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NotificationWidget.init(header:content:attribute:):NotificationWidget.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AttributedButton.type.setter:AttributedButton.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.titleEdgeInsets">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ButtonComponent.decorate():ButtonComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "iv.frame.height">
+            </PersistentString>
+            <PersistentString
+               value = "self.title(for: .normal)">
+            </PersistentString>
+            <PersistentString
+               value = "-(iv.frame.width + leftRightInset)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AttributedButton.contentRect(forBounds:):AttributedButton.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "super.contentRect(forBounds: bounds)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

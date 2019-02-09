@@ -461,7 +461,6 @@
                 <constraint firstAttribute="trailing" secondItem="I0L-Ut-eRr" secondAttribute="trailing" constant="10" id="4H8-m1-aOd"/>
                 <constraint firstItem="Rgt-Dw-27B" firstAttribute="trailing" secondItem="5jY-VS-sqh" secondAttribute="trailing" id="QsJ-mr-cAA"/>
                 <constraint firstItem="5jY-VS-sqh" firstAttribute="trailing" secondItem="n2r-Eb-kKc" secondAttribute="trailing" constant="10" id="a1M-0K-CUB"/>
-                <constraint firstItem="n2r-Eb-kKc" firstAttribute="leading" secondItem="5jY-VS-sqh" secondAttribute="leading" constant="10" id="aOK-gp-xxh"/>
                 <constraint firstItem="Rgt-Dw-27B" firstAttribute="leading" secondItem="5jY-VS-sqh" secondAttribute="leading" id="tL4-55-HZ2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="5jY-VS-sqh"/>

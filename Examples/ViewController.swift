@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var loadingIndicator: LoadingIndicatorComponent!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,11 +48,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showPopup(_ sender: Any) {
-        
-        let popupWidget = PopupWidget(header: "Header!",
-                                      content: "This is your popup contents!\nYou successfully read this notification :)",
-                                      attribute: nil)
-        popupWidget.show(self)
+        PopupWidget.show(self,
+                         header: "Header!",
+                         content: "This is your popup contents!\nYou successfully read this notification :)",
+                         attribute: nil)
     }
 }
 
