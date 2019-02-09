@@ -113,5 +113,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "InternalPopupWidget.show(_:close:completion:):PopupWidget.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

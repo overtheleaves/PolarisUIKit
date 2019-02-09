@@ -116,7 +116,7 @@ class InternalPopupWidget {
                              height: h.frame.height)
             
             h.textColor = attr.textAttribute.color
-            h.font = attr.fontAttribute.font
+            h.font = attr.fontAttribute.font.bold()
             totalHeight += h.frame.height
         }
         
@@ -208,29 +208,22 @@ class InternalPopupWidget {
             self.view.addSubview(self.cancelButton!)
         }
         
-        /// animation
-        let originalFrame = self.view.frame
-        self.view.frame = CGRect(x: originalFrame.origin.x,
-                                 y: -originalFrame.height,
-                                 width: originalFrame.width,
-                                 height: originalFrame.height)
-        target.view.addSubview(self.view)
-        
         /// event handler
         okButton.addTarget(self, action: #selector(pressOk) , for: .touchUpInside)
         if let btn = cancelButton {
             btn.addTarget(self, action: #selector(pressCancel), for: .touchUpInside)
         }
         
-        UIView.animate(withDuration: animationDuration,
-                       delay: 0,
-                       usingSpringWithDamping: 0.5,
-                       initialSpringVelocity: 0.3,
-                       options: [],
-                       animations: {
-                        self.view.frame = originalFrame
-                        
-        }, completion: nil)
+        target.view.addSubview(self.view)
+        
+        WidgetAnimator.show(self.view, completion: nil)
+    }
+    
+    private func hide() {
+        WidgetAnimator.hide(self.view) { (success) in
+            PopupWidget.isModalOpen = false
+            self.view.removeFromSuperview()
+        }
     }
     
     @objc func close(_ sender: UIButton?) {
@@ -238,8 +231,7 @@ class InternalPopupWidget {
             handler()
         }
         
-        PopupWidget.isModalOpen = false
-        self.view.removeFromSuperview()
+        hide()
     }
     
     @objc func pressOk() {
@@ -247,8 +239,7 @@ class InternalPopupWidget {
             handler(true)
         }
         
-        PopupWidget.isModalOpen = false
-        self.view.removeFromSuperview()
+        hide()
     }
     
     @objc func pressCancel() {
@@ -256,7 +247,6 @@ class InternalPopupWidget {
             handler(false)
         }
         
-        PopupWidget.isModalOpen = false
-        self.view.removeFromSuperview()
+        hide()
     }
 }

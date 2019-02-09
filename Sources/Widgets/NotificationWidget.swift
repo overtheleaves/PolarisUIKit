@@ -53,7 +53,7 @@ public class NotificationWidget {
                                  height: h.frame.height)
                 
                 h.textColor = attr.textAttribute.color
-                h.font = attr.fontAttribute.font
+                h.font = attr.fontAttribute.font.bold()
                 totalHeight += h.frame.height
             }
             
@@ -84,64 +84,18 @@ public class NotificationWidget {
         }
     }
     
-    public func show(_ target: UIViewController, period time: PeriodTime, direction: ShowDirection? = .FromTop) {
-        
-        let visibleFrame = view.frame
-        var hiddenFrame: CGRect? = nil
+    public func show(_ target: UIViewController, period time: PeriodTime, showFrom: Widget.ShowDirection? = .FromTop, hideTo: Widget.HideDirection? = .ToTop) {
         
         target.view.addSubview(view)
         
-        // set animation hidden frame (outside of main screen)
-        if let direction = direction {
-            switch direction {
-            case .FromTop:
-                hiddenFrame = CGRect(origin: CGPoint(x: visibleFrame.origin.x,
-                                                     y: -visibleFrame.height),
-                                     size: visibleFrame.size)
-            case .FromBottom:
-                hiddenFrame = CGRect(origin: CGPoint(x: visibleFrame.origin.x,
-                                                     y: UIScreen.main.bounds.height),
-                                     size: visibleFrame.size)
-            case .FromLeft:
-                hiddenFrame = CGRect(origin: CGPoint(x: -visibleFrame.width,
-                                                     y: visibleFrame.origin.y),
-                                     size: visibleFrame.size)
-            case .FromRight:
-                hiddenFrame = CGRect(origin: CGPoint(x: UIScreen.main.bounds.width,
-                                                     y: visibleFrame.origin.y),
-                                     size: visibleFrame.size)
-            }
-        }
-        
-        // 1. hide notification
-        self.view.frame = hiddenFrame!
-        
-        // 2. show notification
-        UIView.animate(withDuration: animationDuration) {
-            self.view.frame = visibleFrame
-        }
-        
-        // 3. hide notification after period time
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(time.rawValue), execute: {
-            
-            UIView.animate(withDuration: self.animationDuration, animations: {
-                self.view.frame = hiddenFrame!
-            }, completion: { (success) in
-                self.view.removeFromSuperview()
-            })
-        })
+        WidgetAnimator.showAndHideAfter(after: TimeInterval(time.rawValue),
+                                        target: self.view,
+                                        showFrom: showFrom, hideTo: hideTo,
+                                        completion: nil)
     }
     
     public enum PeriodTime: Int {
         case LONG = 3000
         case SHORT = 1000
     }
-    
-    public enum ShowDirection {
-        case FromTop
-        case FromBottom
-        case FromLeft
-        case FromRight
-    }
-
 }

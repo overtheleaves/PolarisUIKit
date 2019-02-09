@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE0CFD10220EF526001B09C2 /* UIFont+Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0CFD0F220EF526001B09C2 /* UIFont+Advanced.swift */; };
+		FE0CFD12220EF60E001B09C2 /* WidgetAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0CFD11220EF60E001B09C2 /* WidgetAnimator.swift */; };
+		FE0CFD14220EF949001B09C2 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0CFD13220EF949001B09C2 /* Widget.swift */; };
 		FE55EB4E2207E67E0006DC2E /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB4D2207E67E0006DC2E /* TextFieldComponent.swift */; };
 		FE55EB5022083DB20006DC2E /* ViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB4F22083DB10006DC2E /* ViewComponent.swift */; };
 		FE55EB5322087CB70006DC2E /* ButtonGroupComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE0CFD0F220EF526001B09C2 /* UIFont+Advanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Advanced.swift"; sourceTree = "<group>"; };
+		FE0CFD11220EF60E001B09C2 /* WidgetAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetAnimator.swift; sourceTree = "<group>"; };
+		FE0CFD13220EF949001B09C2 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
 		FE55EB4D2207E67E0006DC2E /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
 		FE55EB4F22083DB10006DC2E /* ViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponent.swift; sourceTree = "<group>"; };
 		FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupComponent.swift; sourceTree = "<group>"; };
@@ -90,6 +96,8 @@
 			children = (
 				FE55EB5D220B31480006DC2E /* NotificationWidget.swift */,
 				FED6F9EC220C4EC8005C9944 /* PopupWidget.swift */,
+				FE0CFD11220EF60E001B09C2 /* WidgetAnimator.swift */,
+				FE0CFD13220EF949001B09C2 /* Widget.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 				FED369FD2205715900B4F2A8 /* Palette.swift */,
 				FED369FF220571AE00B4F2A8 /* StyleAttributeCompatible.swift */,
 				FED36A01220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift */,
+				FE0CFD0F220EF526001B09C2 /* UIFont+Advanced.swift */,
 				FE55EB5F220B331B0006DC2E /* Widgets */,
 				FE55EB5122087A360006DC2E /* Components */,
 			);
@@ -211,6 +220,7 @@
 			files = (
 				FED369FE2205715900B4F2A8 /* Palette.swift in Sources */,
 				FED36A06220711CA00B4F2A8 /* LabelComponent.swift in Sources */,
+				FE0CFD10220EF526001B09C2 /* UIFont+Advanced.swift in Sources */,
 				FE55EB4E2207E67E0006DC2E /* TextFieldComponent.swift in Sources */,
 				FED369EB2205706100B4F2A8 /* ViewController.swift in Sources */,
 				FE55EB5022083DB20006DC2E /* ViewComponent.swift in Sources */,
@@ -221,7 +231,9 @@
 				FE55EB5E220B31480006DC2E /* NotificationWidget.swift in Sources */,
 				FED369E92205706100B4F2A8 /* AppDelegate.swift in Sources */,
 				FED36A00220571AE00B4F2A8 /* StyleAttributeCompatible.swift in Sources */,
+				FE0CFD14220EF949001B09C2 /* Widget.swift in Sources */,
 				FED6F9EB220C0722005C9944 /* LoadingIndicatorComponent.swift in Sources */,
+				FE0CFD12220EF60E001B09C2 /* WidgetAnimator.swift in Sources */,
 				FED36A082207461100B4F2A8 /* ButtonComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
