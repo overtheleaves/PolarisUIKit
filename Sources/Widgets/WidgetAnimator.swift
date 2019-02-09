@@ -8,13 +8,20 @@
 
 import UIKit
 
-class WidgetAnimator {
+public protocol WidgetAnimator {
+    typealias CompleteHandler = (Bool) -> Void
+    func show(_ target: UIView, showFrom: Widget.ShowDirection?, completion: CompleteHandler?)
+    func showAndHideAfter(after: TimeInterval, target: UIView,
+                        showFrom: Widget.ShowDirection?, hideTo: Widget.HideDirection?,
+                        completion: CompleteHandler?)
+    func hide(_ target: UIView, hideTo: Widget.HideDirection?, completion: CompleteHandler?)
+}
+
+class DefaultWidgetAnimator: WidgetAnimator {
     
-    private static let animateDuration = 0.4
-    public typealias CompleteHandler = (Bool) -> Void
+    private let animateDuration = 0.4
     
-    
-    static func show(_ target: UIView, showFrom: Widget.ShowDirection? = .FromTop, completion: CompleteHandler?) {
+    func show(_ target: UIView, showFrom: Widget.ShowDirection? = .FromTop, completion: CompleteHandler?) {
         
         let originalFrame = target.frame
         var hiddenFrame: CGRect?
@@ -42,9 +49,9 @@ class WidgetAnimator {
         
         // 1. set target hiddenframe
         target.frame = hiddenFrame!
-
+        
         // 2. run show animation
-        UIView.animate(withDuration: WidgetAnimator.animateDuration,
+        UIView.animate(withDuration: animateDuration,
                        delay: 0,
                        usingSpringWithDamping: 0.7,
                        initialSpringVelocity: 0.3,
@@ -55,19 +62,19 @@ class WidgetAnimator {
         
     }
     
-    static func showAndHideAfter(after: TimeInterval, target: UIView,
-                                 showFrom: Widget.ShowDirection? = .FromTop, hideTo: Widget.HideDirection? = .ToTop,
-                                 completion: CompleteHandler?) {
+    func showAndHideAfter(after: TimeInterval, target: UIView,
+                          showFrom: Widget.ShowDirection? = .FromTop, hideTo: Widget.HideDirection? = .ToTop,
+                          completion: CompleteHandler?) {
         
         show(target, showFrom: showFrom, completion: { (success) in
             // hide after
             DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(Int(after)), execute: {
-                hide(target, hideTo: hideTo, completion: completion)
+                self.hide(target, hideTo: hideTo, completion: completion)
             })
         })
     }
     
-    static func hide(_ target: UIView, hideTo: Widget.HideDirection? = .ToTop, completion: CompleteHandler?) {
+    func hide(_ target: UIView, hideTo: Widget.HideDirection? = .ToTop, completion: CompleteHandler?) {
         
         let originalFrame = target.frame
         var hiddenFrame: CGRect?
@@ -99,7 +106,7 @@ class WidgetAnimator {
                        initialSpringVelocity: 0.3,
                        options: [],
                        animations: {
-                      target.frame = hiddenFrame!
+                        target.frame = hiddenFrame!
         }, completion: completion)
     }
 }

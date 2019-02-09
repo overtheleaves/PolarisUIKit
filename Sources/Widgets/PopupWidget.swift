@@ -40,6 +40,7 @@ class InternalPopupWidget {
     public var cancelTitle: String? = "Cancel"
     public var okButtonColor: UIColor = Palette.blue
     public var cancelButtonColor: UIColor? = Palette.lightDark
+    public var widgetAnimator: WidgetAnimator = DefaultWidgetAnimator()
     
     private let view: UIView = UIView()
     private var headerLabel: UILabel? = nil
@@ -216,11 +217,11 @@ class InternalPopupWidget {
         
         target.view.addSubview(self.view)
         
-        WidgetAnimator.show(self.view, completion: nil)
+        widgetAnimator.show(self.view, showFrom: .FromTop, completion: nil)
     }
     
     private func hide() {
-        WidgetAnimator.hide(self.view) { (success) in
+        widgetAnimator.hide(self.view, hideTo: .ToTop) { (success) in
             PopupWidget.isModalOpen = false
             self.view.removeFromSuperview()
         }

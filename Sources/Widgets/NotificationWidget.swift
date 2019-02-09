@@ -11,6 +11,8 @@ import Foundation
 
 public class NotificationWidget {
     
+    public var widgetAnimator: WidgetAnimator = DefaultWidgetAnimator()
+   
     private var headerLabel: UILabel? = nil
     private var contentLabel: UILabel
     
@@ -84,11 +86,12 @@ public class NotificationWidget {
         }
     }
     
-    public func show(_ target: UIViewController, period time: PeriodTime, showFrom: Widget.ShowDirection? = .FromTop, hideTo: Widget.HideDirection? = .ToTop) {
+    public func show(_ target: UIViewController, period time: PeriodTime,
+                     showFrom: Widget.ShowDirection? = .FromTop, hideTo: Widget.HideDirection? = .ToTop) {
         
         target.view.addSubview(view)
         
-        WidgetAnimator.showAndHideAfter(after: TimeInterval(time.rawValue),
+        widgetAnimator.showAndHideAfter(after: TimeInterval(time.rawValue),
                                         target: self.view,
                                         showFrom: showFrom, hideTo: hideTo,
                                         completion: nil)
