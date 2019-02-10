@@ -47,22 +47,23 @@ public class LabelComponent: UILabel {
                 self.attributedText = attrString.attributedSubstring(from: NSRange(location: 0, length: text.length))
             }
             
-            
-            // Background Attribute
-            //
-            // - background color
-            self.layer.backgroundColor = attribute.backgroundAttribute.color.cgColor
-            
-            
-            // Box Attribute
-            //
-            // - corner radius
-            self.layer.cornerRadius = attribute.boxAttribute.borderRadius
-            
-            // - border
-            self.layer.borderWidth = attribute.boxAttribute.borderWidth
-            self.layer.borderColor = attribute.boxAttribute.borderColor.cgColor
-            
+//
+//            // Background Attribute
+//            //
+//            // - background color
+//            self.layer.backgroundColor = attribute.backgroundAttribute.color.cgColor
+//
+//
+//            // Box Attribute
+//            //
+//            // - corner radius
+//            self.layer.cornerRadius = attribute.boxAttribute.borderRadius
+//
+//            // - border
+//            self.layer.borderWidth = attribute.boxAttribute.borderWidth
+//            self.layer.borderColor = attribute.boxAttribute.borderColor.cgColor
+//
+            Palette.decorateLayer(self.layer, view: self, attribute: attribute)
             self.sizeToFit()
         }
     }

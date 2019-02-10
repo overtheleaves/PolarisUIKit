@@ -64,6 +64,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Palette.addAttribute("myCheckBtnAttr", attribute: myCheckBtnAttrNormal)
         Palette.addAttribute("myCheckBtnAttr", attribute: myCheckBtnAttrSelected, linkState: .pressed)
         
+        // mysegment attr
+        let mySegmentAttrNormal = StyleAttribute()
+        mySegmentAttrNormal.boxAttribute.borderColor = Palette.darkGray
+        mySegmentAttrNormal.boxAttribute.borderWidth = 1.0
+        mySegmentAttrNormal.boxAttribute.borderRadiusWithHeightRatio = 0.5
+        mySegmentAttrNormal.backgroundAttribute.color = UIColor.clear
+        mySegmentAttrNormal.textAttribute.color = Palette.lightViolet
+        
+        let mySegmentAttrSelected = StyleAttribute()
+        mySegmentAttrSelected.backgroundAttribute.color = Palette.violet
+        mySegmentAttrSelected.textAttribute.color = UIColor.white
+        
+        Palette.addAttribute("mySegmentAttr", attribute: mySegmentAttrNormal)
+        Palette.addAttribute("mySegmentAttr", attribute: mySegmentAttrSelected, linkState: .pressed)
+        
         // color scheme attributes
         let commonBoxAttribute = BoxAttribute()
         commonBoxAttribute.borderRadius = 5.0

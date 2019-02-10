@@ -30,12 +30,13 @@ class ViewComponent: UIView {
             /// Box Attribute
             ///
             /// box layer
-            let decorateLayer = CALayer()
-            Palette.decorateLayer(decorateLayer, view: self, attribute: attribute)
+//            let decorateLayer = CALayer()
+//            Palette.decorateLayer(decorateLayer, view: self, attribute: attribute)
             
-            decorateLayer.frame = getAttributedPaddingRect(original: CGRect(x: 0, y: 0, width: self.layer.frame.width, height: self.layer.frame.height))
+            Palette.decorateLayer(self.layer, view: self, attribute: attribute)
+            self.layer.frame = getAttributedPaddingRect(original: CGRect(x: 0, y: 0, width: self.layer.frame.width, height: self.layer.frame.height))
                       
-            self.layer.addSublayer(decorateLayer)
+//            self.layer.addSublayer(decorateLayer)
         }
     }
     

@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "SegmentSetComponent.decorate():SegmentSetComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sortedViews">
+            </PersistentString>
+            <PersistentString
+               value = "sortedViews[0] as? UISegment">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "PopupWidget.init(header:content:attribute:):PopupWidget.swift">
          <PersistentStrings>
             <PersistentString
@@ -26,6 +37,25 @@
             </PersistentString>
             <PersistentString
                value = "view.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SwitcherComponent.decorate():SwitcherComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentSegmentIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SwitcherComponent.valueChanged():SwitcherComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sortedViews">
+            </PersistentString>
+            <PersistentString
+               value = "selectedSegmentIndex">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

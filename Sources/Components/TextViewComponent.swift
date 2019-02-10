@@ -31,13 +31,6 @@ class TextViewComponent: UITextView {
             //
             // - font
             self.font = attribute.fontAttribute.font
-          
-            
-            // Background Attribute
-            //
-            // - background color
-            self.layer.backgroundColor = attribute.backgroundAttribute.color.cgColor
-            
             
             // Text Attribute
             //
@@ -53,21 +46,32 @@ class TextViewComponent: UITextView {
                 self.attributedText = attrString.attributedSubstring(from: NSRange(location: 0, length: text.length))
             }
             
-            
-            // Border Attribute
-            //
-            // - corner radius
-            self.layer.cornerRadius = attribute.boxAttribute.borderRadius
+//
+//            // Background Attribute
+//            //
+//            // - background color
+//            self.layer.backgroundColor = attribute.backgroundAttribute.color.cgColor
+//
+//
+//            // Border Attribute
+//            //
+//            // - corner radius
+//            self.layer.cornerRadius = attribute.boxAttribute.borderRadius
+//
+//
+//            // - border
+//            self.layer.borderWidth = attribute.boxAttribute.borderWidth
+//            self.layer.borderColor = attribute.boxAttribute.borderColor.cgColor
+//
+
+            Palette.decorateLayer(self.layer, view: self, attribute: attribute)
+            self.layer.masksToBounds = true 
             
             // - padding
             self.textContainerInset.top = attribute.boxAttribute.paddingTop
             self.textContainerInset.bottom = attribute.boxAttribute.paddingBottom
             self.textContainerInset.left = attribute.boxAttribute.paddingLeft
             self.textContainerInset.right = attribute.boxAttribute.paddingRight
-            
-            // - border
-            self.layer.borderWidth = attribute.boxAttribute.borderWidth
-            self.layer.borderColor = attribute.boxAttribute.borderColor.cgColor            
         }
     }
 }

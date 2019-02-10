@@ -56,7 +56,7 @@ class TextFieldComponent: UITextField {
             decorateLayer.frame = getAttributedPaddingRect(original: CGRect(x: 0, y: 0, width: self.layer.frame.width, height: self.layer.frame.height))
             
             self.layer.addSublayer(decorateLayer)
-            self.layer.masksToBounds = true
+            //self.layer.masksToBounds = true
             
             /// original border style clear
             self.borderStyle = .none
