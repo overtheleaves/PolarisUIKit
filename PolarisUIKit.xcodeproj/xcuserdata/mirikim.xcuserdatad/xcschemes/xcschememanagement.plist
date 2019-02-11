@@ -7,7 +7,25 @@
 		<key>PolarisUIKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<key>PolarisUIKitExample.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>FE0CFD6C221044C8001B09C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE0CFD8E22104506001B09C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

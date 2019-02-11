@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PolarisUIKit
 
 class ViewController: UIViewController {
     
@@ -20,7 +21,7 @@ class ViewController: UIViewController {
         self.stackView.translatesAutoresizingMaskIntoConstraints = false
         
         self.stackView.topAnchor.constraint(equalTo: self.scrollView.topAnchor).isActive = true
-        self.stackView.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor).isActive = true
+        self.stackView.bottomAnchor.constraint( equalTo: self.scrollView.bottomAnchor).isActive = true
         self.stackView.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor).isActive = true
         self.stackView.trailingAnchor.constraint(equalTo: self.scrollView.trailingAnchor).isActive = true
         
@@ -30,7 +31,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showNotification(_ sender: Any) {
-        
         let attr = StyleAttribute()
         attr.backgroundAttribute.color = Palette.red
         attr.textAttribute.color = Palette.lightGray

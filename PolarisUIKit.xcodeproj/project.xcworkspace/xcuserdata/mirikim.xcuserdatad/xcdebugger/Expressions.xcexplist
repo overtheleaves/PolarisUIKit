@@ -3,13 +3,18 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "SegmentSetComponent.decorate():SegmentSetComponent.swift">
+         contextName = "InternalPopupWidget.show(_:close:completion:):PopupWidget.swift">
          <PersistentStrings>
             <PersistentString
-               value = "sortedViews">
+               value = "self.view.frame">
             </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.viewDidLoad():ViewController.swift">
+         <PersistentStrings>
             <PersistentString
-               value = "sortedViews[0] as? UISegment">
+               value = "loadingIndicator">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -90,6 +95,17 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "SegmentSetComponent.decorate():SegmentSetComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sortedViews">
+            </PersistentString>
+            <PersistentString
+               value = "sortedViews[0] as? UISegment">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AttributedView.initialize():AttributedView.swift">
          <PersistentStrings>
             <PersistentString
@@ -98,18 +114,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "BoxAttribute.padding.didset:Palette.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "padding">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "NotificationWidget.init(header:content:attribute:):NotificationWidget.swift">
          <PersistentStrings>
             <PersistentString
                value = "view.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BoxAttribute.padding.didset:Palette.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "padding">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -140,14 +156,6 @@
          <PersistentStrings>
             <PersistentString
                value = "super.contentRect(forBounds: bounds)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "InternalPopupWidget.show(_:close:completion:):PopupWidget.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.view.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -227,7 +227,7 @@ public class FontAttribute {
 }
 
 public class BackgroundAttribute {
-    public var color: UIColor = UIColor.white
+    public var color: UIColor = UIColor.clear
     
     public init() { }
     public init(color: UIColor) {
@@ -276,6 +276,8 @@ public class BoxAttribute {
     public var shadowOffset: CGSize = CGSize(width: 0, height: -3)
     public var shadowRadius: CGFloat = 3
     public var shadowOpacity: Float = 0.0
+    
+    public init() { }
 }
 
 

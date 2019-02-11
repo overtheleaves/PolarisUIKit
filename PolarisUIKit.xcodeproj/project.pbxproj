@@ -7,41 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE0CFD10220EF526001B09C2 /* UIFont+Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0CFD0F220EF526001B09C2 /* UIFont+Advanced.swift */; };
-		FE0CFD14220EF949001B09C2 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0CFD13220EF949001B09C2 /* Widget.swift */; };
-		FE0CFD16220F03D0001B09C2 /* WidgetAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0CFD15220F03D0001B09C2 /* WidgetAnimator.swift */; };
-		FE0CFD1A220FC8FA001B09C2 /* SegmentedComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0CFD19220FC8FA001B09C2 /* SegmentedComponent.swift */; };
-		FE55EB4E2207E67E0006DC2E /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB4D2207E67E0006DC2E /* TextFieldComponent.swift */; };
-		FE55EB5022083DB20006DC2E /* ViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB4F22083DB10006DC2E /* ViewComponent.swift */; };
-		FE55EB5322087CB70006DC2E /* ButtonGroupComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */; };
-		FE55EB5C2209EA810006DC2E /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = FE55EB5B2209EA810006DC2E /* check.png */; };
-		FE55EB5E220B31480006DC2E /* NotificationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB5D220B31480006DC2E /* NotificationWidget.swift */; };
-		FED369E92205706100B4F2A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369E82205706100B4F2A8 /* AppDelegate.swift */; };
-		FED369EB2205706100B4F2A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369EA2205706100B4F2A8 /* ViewController.swift */; };
-		FED369F02205706300B4F2A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED369EF2205706300B4F2A8 /* Assets.xcassets */; };
-		FED369FE2205715900B4F2A8 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369FD2205715900B4F2A8 /* Palette.swift */; };
-		FED36A00220571AE00B4F2A8 /* StyleAttributeCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369FF220571AE00B4F2A8 /* StyleAttributeCompatible.swift */; };
-		FED36A02220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A01220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift */; };
-		FED36A06220711CA00B4F2A8 /* LabelComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A05220711CA00B4F2A8 /* LabelComponent.swift */; };
-		FED36A082207461100B4F2A8 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A072207461100B4F2A8 /* ButtonComponent.swift */; };
-		FED36A0A2207D35100B4F2A8 /* TextViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A092207D35100B4F2A8 /* TextViewComponent.swift */; };
-		FED6F9E9220BD53C005C9944 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED6F9E8220BD53C005C9944 /* ViewController.xib */; };
-		FED6F9EB220C0722005C9944 /* LoadingIndicatorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED6F9EA220C0722005C9944 /* LoadingIndicatorComponent.swift */; };
-		FED6F9ED220C4EC8005C9944 /* PopupWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED6F9EC220C4EC8005C9944 /* PopupWidget.swift */; };
-		FED6F9EF220C7933005C9944 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = FED6F9EE220C7933005C9944 /* close.png */; };
+		FE0CFD71221044C8001B09C2 /* PolarisUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FE0CFD6F221044C8001B09C2 /* PolarisUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE0CFDA1221045C8001B09C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369E82205706100B4F2A8 /* AppDelegate.swift */; };
+		FE0CFDA2221045C8001B09C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369EA2205706100B4F2A8 /* ViewController.swift */; };
+		FE0CFDAB22104845001B09C2 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369FD2205715900B4F2A8 /* Palette.swift */; };
+		FE0CFDAC22104845001B09C2 /* StyleAttributeCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED369FF220571AE00B4F2A8 /* StyleAttributeCompatible.swift */; };
+		FE0CFDAD22104845001B09C2 /* UIView+StyleAttributeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A01220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift */; };
+		FE0CFDAE22104845001B09C2 /* UIFont+Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0CFD0F220EF526001B09C2 /* UIFont+Advanced.swift */; };
+		FE0CFDAF22104845001B09C2 /* WidgetAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0CFD15220F03D0001B09C2 /* WidgetAnimator.swift */; };
+		FE0CFDB022104845001B09C2 /* NotificationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB5D220B31480006DC2E /* NotificationWidget.swift */; };
+		FE0CFDB122104845001B09C2 /* PopupWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED6F9EC220C4EC8005C9944 /* PopupWidget.swift */; };
+		FE0CFDB222104845001B09C2 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0CFD13220EF949001B09C2 /* Widget.swift */; };
+		FE0CFDB322104845001B09C2 /* SegmentedComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0CFD19220FC8FA001B09C2 /* SegmentedComponent.swift */; };
+		FE0CFDB422104845001B09C2 /* LabelComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A05220711CA00B4F2A8 /* LabelComponent.swift */; };
+		FE0CFDB522104845001B09C2 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A072207461100B4F2A8 /* ButtonComponent.swift */; };
+		FE0CFDB622104845001B09C2 /* TextViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED36A092207D35100B4F2A8 /* TextViewComponent.swift */; };
+		FE0CFDB722104845001B09C2 /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB4D2207E67E0006DC2E /* TextFieldComponent.swift */; };
+		FE0CFDB822104845001B09C2 /* ViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB4F22083DB10006DC2E /* ViewComponent.swift */; };
+		FE0CFDB922104845001B09C2 /* ButtonGroupComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */; };
+		FE0CFDBA22104845001B09C2 /* LoadingIndicatorComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED6F9EA220C0722005C9944 /* LoadingIndicatorComponent.swift */; };
+		FE0CFDBF22104926001B09C2 /* PolarisUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE0CFD6D221044C8001B09C2 /* PolarisUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FE0CFDC322104A28001B09C2 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = FED6F9EE220C7933005C9944 /* close.png */; };
+		FE0CFDC422104A28001B09C2 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = FE55EB5B2209EA810006DC2E /* check.png */; };
+		FE0CFDC522104A2D001B09C2 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED6F9E8220BD53C005C9944 /* ViewController.xib */; };
+		FE0CFDC622104A2D001B09C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED369EF2205706300B4F2A8 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE0CFDC022104927001B09C2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FE0CFDBF22104926001B09C2 /* PolarisUIKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FE0CFD0F220EF526001B09C2 /* UIFont+Advanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Advanced.swift"; sourceTree = "<group>"; };
 		FE0CFD13220EF949001B09C2 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
 		FE0CFD15220F03D0001B09C2 /* WidgetAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetAnimator.swift; sourceTree = "<group>"; };
 		FE0CFD19220FC8FA001B09C2 /* SegmentedComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedComponent.swift; sourceTree = "<group>"; };
+		FE0CFD6D221044C8001B09C2 /* PolarisUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PolarisUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE0CFD6F221044C8001B09C2 /* PolarisUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PolarisUIKit.h; sourceTree = "<group>"; };
+		FE0CFD70221044C8001B09C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE0CFD8F22104506001B09C2 /* PolarisUIKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarisUIKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE55EB4D2207E67E0006DC2E /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
 		FE55EB4F22083DB10006DC2E /* ViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponent.swift; sourceTree = "<group>"; };
 		FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupComponent.swift; sourceTree = "<group>"; };
 		FE55EB5B2209EA810006DC2E /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		FE55EB5D220B31480006DC2E /* NotificationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationWidget.swift; sourceTree = "<group>"; };
-		FED369E52205706100B4F2A8 /* PolarisUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolarisUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED369E82205706100B4F2A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED369EA2205706100B4F2A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FED369EF2205706300B4F2A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +79,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FED369E22205706100B4F2A8 /* Frameworks */ = {
+		FE0CFD6A221044C8001B09C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE0CFD8C22104506001B09C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -70,6 +96,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE0CFD6E221044C8001B09C2 /* PolarisUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				FED369FA2205707400B4F2A8 /* Sources */,
+				FE0CFD6F221044C8001B09C2 /* PolarisUIKit.h */,
+				FE0CFD70221044C8001B09C2 /* Info.plist */,
+			);
+			path = PolarisUIKit;
+			sourceTree = "<group>";
+		};
+		FE0CFD9022104506001B09C2 /* PolarisUIKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				FE55EB542209283C0006DC2E /* Resources */,
+				FED369E82205706100B4F2A8 /* AppDelegate.swift */,
+				FED369EA2205706100B4F2A8 /* ViewController.swift */,
+				FED6F9E8220BD53C005C9944 /* ViewController.xib */,
+				FED369EF2205706300B4F2A8 /* Assets.xcassets */,
+				FED369F42205706300B4F2A8 /* Info.plist */,
+			);
+			path = PolarisUIKitExample;
+			sourceTree = "<group>";
+		};
+		FE0CFDA4221045D7001B09C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE55EB5122087A360006DC2E /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,31 +165,20 @@
 			isa = PBXGroup;
 			children = (
 				FED369FB220570E400B4F2A8 /* Package.swift */,
-				FE55EB542209283C0006DC2E /* Resources */,
-				FED369FA2205707400B4F2A8 /* Sources */,
-				FED369E72205706100B4F2A8 /* Examples */,
+				FE0CFD6E221044C8001B09C2 /* PolarisUIKit */,
+				FE0CFD9022104506001B09C2 /* PolarisUIKitExample */,
 				FED369E62205706100B4F2A8 /* Products */,
+				FE0CFDA4221045D7001B09C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		FED369E62205706100B4F2A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FED369E52205706100B4F2A8 /* PolarisUIKit.app */,
+				FE0CFD6D221044C8001B09C2 /* PolarisUIKit.framework */,
+				FE0CFD8F22104506001B09C2 /* PolarisUIKitExample.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FED369E72205706100B4F2A8 /* Examples */ = {
-			isa = PBXGroup;
-			children = (
-				FED369E82205706100B4F2A8 /* AppDelegate.swift */,
-				FED369EA2205706100B4F2A8 /* ViewController.swift */,
-				FED6F9E8220BD53C005C9944 /* ViewController.xib */,
-				FED369EF2205706300B4F2A8 /* Assets.xcassets */,
-				FED369F42205706300B4F2A8 /* Info.plist */,
-			);
-			path = Examples;
 			sourceTree = "<group>";
 		};
 		FED369FA2205707400B4F2A8 /* Sources */ = {
@@ -151,14 +196,26 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		FE0CFD68221044C8001B09C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE0CFD71221044C8001B09C2 /* PolarisUIKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		FED369E42205706100B4F2A8 /* PolarisUIKit */ = {
+		FE0CFD6C221044C8001B09C2 /* PolarisUIKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FED369F72205706300B4F2A8 /* Build configuration list for PBXNativeTarget "PolarisUIKit" */;
+			buildConfigurationList = FE0CFD72221044C8001B09C2 /* Build configuration list for PBXNativeTarget "PolarisUIKit" */;
 			buildPhases = (
-				FED369E12205706100B4F2A8 /* Sources */,
-				FED369E22205706100B4F2A8 /* Frameworks */,
-				FED369E32205706100B4F2A8 /* Resources */,
+				FE0CFD68221044C8001B09C2 /* Headers */,
+				FE0CFD69221044C8001B09C2 /* Sources */,
+				FE0CFD6A221044C8001B09C2 /* Frameworks */,
+				FE0CFD6B221044C8001B09C2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -166,7 +223,25 @@
 			);
 			name = PolarisUIKit;
 			productName = PolarisUIKit;
-			productReference = FED369E52205706100B4F2A8 /* PolarisUIKit.app */;
+			productReference = FE0CFD6D221044C8001B09C2 /* PolarisUIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FE0CFD8E22104506001B09C2 /* PolarisUIKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE0CFD9E22104507001B09C2 /* Build configuration list for PBXNativeTarget "PolarisUIKitExample" */;
+			buildPhases = (
+				FE0CFD8B22104506001B09C2 /* Sources */,
+				FE0CFD8C22104506001B09C2 /* Frameworks */,
+				FE0CFD8D22104506001B09C2 /* Resources */,
+				FE0CFDC022104927001B09C2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PolarisUIKitExample;
+			productName = PolarisUIKitExample;
+			productReference = FE0CFD8F22104506001B09C2 /* PolarisUIKitExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -179,7 +254,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = overtheleaves;
 				TargetAttributes = {
-					FED369E42205706100B4F2A8 = {
+					FE0CFD6C221044C8001B09C2 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					FE0CFD8E22104506001B09C2 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -197,54 +275,167 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FED369E42205706100B4F2A8 /* PolarisUIKit */,
+				FE0CFD6C221044C8001B09C2 /* PolarisUIKit */,
+				FE0CFD8E22104506001B09C2 /* PolarisUIKitExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FED369E32205706100B4F2A8 /* Resources */ = {
+		FE0CFD6B221044C8001B09C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FED6F9E9220BD53C005C9944 /* ViewController.xib in Resources */,
-				FE55EB5C2209EA810006DC2E /* check.png in Resources */,
-				FED6F9EF220C7933005C9944 /* close.png in Resources */,
-				FED369F02205706300B4F2A8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE0CFD8D22104506001B09C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE0CFDC522104A2D001B09C2 /* ViewController.xib in Resources */,
+				FE0CFDC622104A2D001B09C2 /* Assets.xcassets in Resources */,
+				FE0CFDC322104A28001B09C2 /* close.png in Resources */,
+				FE0CFDC422104A28001B09C2 /* check.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FED369E12205706100B4F2A8 /* Sources */ = {
+		FE0CFD69221044C8001B09C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FED369FE2205715900B4F2A8 /* Palette.swift in Sources */,
-				FED36A06220711CA00B4F2A8 /* LabelComponent.swift in Sources */,
-				FE0CFD10220EF526001B09C2 /* UIFont+Advanced.swift in Sources */,
-				FE55EB4E2207E67E0006DC2E /* TextFieldComponent.swift in Sources */,
-				FED369EB2205706100B4F2A8 /* ViewController.swift in Sources */,
-				FE0CFD16220F03D0001B09C2 /* WidgetAnimator.swift in Sources */,
-				FE55EB5022083DB20006DC2E /* ViewComponent.swift in Sources */,
-				FE55EB5322087CB70006DC2E /* ButtonGroupComponent.swift in Sources */,
-				FED36A0A2207D35100B4F2A8 /* TextViewComponent.swift in Sources */,
-				FED36A02220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift in Sources */,
-				FED6F9ED220C4EC8005C9944 /* PopupWidget.swift in Sources */,
-				FE55EB5E220B31480006DC2E /* NotificationWidget.swift in Sources */,
-				FED369E92205706100B4F2A8 /* AppDelegate.swift in Sources */,
-				FED36A00220571AE00B4F2A8 /* StyleAttributeCompatible.swift in Sources */,
-				FE0CFD14220EF949001B09C2 /* Widget.swift in Sources */,
-				FE0CFD1A220FC8FA001B09C2 /* SegmentedComponent.swift in Sources */,
-				FED6F9EB220C0722005C9944 /* LoadingIndicatorComponent.swift in Sources */,
-				FED36A082207461100B4F2A8 /* ButtonComponent.swift in Sources */,
+				FE0CFDAB22104845001B09C2 /* Palette.swift in Sources */,
+				FE0CFDAC22104845001B09C2 /* StyleAttributeCompatible.swift in Sources */,
+				FE0CFDAD22104845001B09C2 /* UIView+StyleAttributeExtension.swift in Sources */,
+				FE0CFDAE22104845001B09C2 /* UIFont+Advanced.swift in Sources */,
+				FE0CFDAF22104845001B09C2 /* WidgetAnimator.swift in Sources */,
+				FE0CFDB022104845001B09C2 /* NotificationWidget.swift in Sources */,
+				FE0CFDB122104845001B09C2 /* PopupWidget.swift in Sources */,
+				FE0CFDB222104845001B09C2 /* Widget.swift in Sources */,
+				FE0CFDB322104845001B09C2 /* SegmentedComponent.swift in Sources */,
+				FE0CFDB422104845001B09C2 /* LabelComponent.swift in Sources */,
+				FE0CFDB522104845001B09C2 /* ButtonComponent.swift in Sources */,
+				FE0CFDB622104845001B09C2 /* TextViewComponent.swift in Sources */,
+				FE0CFDB722104845001B09C2 /* TextFieldComponent.swift in Sources */,
+				FE0CFDB822104845001B09C2 /* ViewComponent.swift in Sources */,
+				FE0CFDB922104845001B09C2 /* ButtonGroupComponent.swift in Sources */,
+				FE0CFDBA22104845001B09C2 /* LoadingIndicatorComponent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE0CFD8B22104506001B09C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE0CFDA1221045C8001B09C2 /* AppDelegate.swift in Sources */,
+				FE0CFDA2221045C8001B09C2 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		FE0CFD73221044C8001B09C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VTCW5H5N35;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PolarisUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = overtheleaves.PolarisUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FE0CFD74221044C8001B09C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VTCW5H5N35;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PolarisUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = overtheleaves.PolarisUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FE0CFD9F22104507001B09C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VTCW5H5N35;
+				INFOPLIST_FILE = PolarisUIKitExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = overtheleaves.PolarisUIKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE0CFDA022104507001B09C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VTCW5H5N35;
+				INFOPLIST_FILE = PolarisUIKitExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = overtheleaves.PolarisUIKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FED369F52205706300B4F2A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -361,59 +552,32 @@
 			};
 			name = Release;
 		};
-		FED369F82205706300B4F2A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VTCW5H5N35;
-				INFOPLIST_FILE = "$(SRCROOT)/Examples/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = overtheleaves.PolarisUIKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FED369F92205706300B4F2A8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VTCW5H5N35;
-				INFOPLIST_FILE = "$(SRCROOT)/Examples/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = overtheleaves.PolarisUIKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FE0CFD72221044C8001B09C2 /* Build configuration list for PBXNativeTarget "PolarisUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE0CFD73221044C8001B09C2 /* Debug */,
+				FE0CFD74221044C8001B09C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE0CFD9E22104507001B09C2 /* Build configuration list for PBXNativeTarget "PolarisUIKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE0CFD9F22104507001B09C2 /* Debug */,
+				FE0CFDA022104507001B09C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FED369E02205706100B4F2A8 /* Build configuration list for PBXProject "PolarisUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FED369F52205706300B4F2A8 /* Debug */,
 				FED369F62205706300B4F2A8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FED369F72205706300B4F2A8 /* Build configuration list for PBXNativeTarget "PolarisUIKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FED369F82205706300B4F2A8 /* Debug */,
-				FED369F92205706300B4F2A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
