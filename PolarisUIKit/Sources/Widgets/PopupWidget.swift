@@ -28,7 +28,12 @@ public class PopupWidget {
         }
         
         widget = InternalPopupWidget(header: header, content: content, attribute: attribute)
-        widget!.show(target, close: close, completion: completion)
+        
+        let viewController = UIViewController()
+        viewController.modalPresentationStyle = .overFullScreen
+        target.present(viewController, animated: false, completion: { () in
+            widget!.show(viewController, close: close, completion: completion)
+        })
         
         return true
     }
@@ -43,6 +48,7 @@ class InternalPopupWidget {
     public var widgetAnimator: WidgetAnimator = DefaultWidgetAnimator()
     
     private let view: UIView = UIView()
+    private let backgroundView: UIView = UIView(frame: UIScreen.main.bounds)
     private var headerLabel: UILabel? = nil
     private let contentLabel: UILabel = UILabel()
     private let okButton: UIButton = UIButton(type: .custom)
@@ -58,6 +64,7 @@ class InternalPopupWidget {
     
     private var closeHandler: PopupWidget.CloseHandler?
     private var completeHandler: PopupWidget.CompleteHandler?
+    private var currentViewController: UIViewController?
     
     private let attribute: StyleAttribute
     
@@ -99,6 +106,10 @@ class InternalPopupWidget {
         contentLabel.numberOfLines = 0
         contentLabel.lineBreakMode = .byWordWrapping
         view.addSubview(self.contentLabel)
+        
+        // background view
+        backgroundView.backgroundColor = Palette.dimmed
+        backgroundView.isUserInteractionEnabled = false // disable dimmed area
         
         // attribute
         let attr = self.attribute
@@ -145,18 +156,22 @@ class InternalPopupWidget {
                                     height: self.okButton.frame.height)
         totalHeight += (okButton.frame.height + contentButtonGap)
         
-        /// background view setting
+        /// content view setting
+        let totalContentViewHeight = totalHeight     // header height + content height + button height
+            + attr.boxAttribute.paddingTop
+            + attr.boxAttribute.paddingBottom
+        let viewY: CGFloat = (UIScreen.main.bounds.height - (totalContentViewHeight)) / 2
+        
         view.frame = CGRect(x: attr.boxAttribute.marginLeft,
-                            y: attr.boxAttribute.marginTop,
+                            y: viewY,
                             width: UIScreen.main.bounds.width
                                 - attr.boxAttribute.marginLeft
                                 - attr.boxAttribute.marginRight,
-                            height: totalHeight     // header height + content height + button height
-                                + attr.boxAttribute.paddingTop
-                                + attr.boxAttribute.paddingBottom)
+                            height: totalContentViewHeight)
         
         view.backgroundColor = attr.backgroundAttribute.color
         view.layer.cornerRadius = attr.boxAttribute.borderRadius
+        
         
         /// close button
         /// top right side of the view.
@@ -175,6 +190,7 @@ class InternalPopupWidget {
         
         self.closeHandler = close
         self.completeHandler = completion
+        self.currentViewController = target
         
         // button setting
         var cornerRadius = attribute.boxAttribute.borderRadius
@@ -215,15 +231,23 @@ class InternalPopupWidget {
             btn.addTarget(self, action: #selector(pressCancel), for: .touchUpInside)
         }
         
+        target.view.addSubview(self.backgroundView)
         target.view.addSubview(self.view)
         
+        widgetAnimator.show(self.backgroundView, showFrom: .FadeIn, completion: nil)
         widgetAnimator.show(self.view, showFrom: .FromTop, completion: nil)
     }
     
     private func hide() {
+        widgetAnimator.hide(self.backgroundView, hideTo: .FadeOut, completion: nil)
         widgetAnimator.hide(self.view, hideTo: .ToTop) { (success) in
             PopupWidget.isModalOpen = false
             self.view.removeFromSuperview()
+            self.backgroundView.removeFromSuperview()
+            
+            if let vc = self.currentViewController {
+                vc.dismiss(animated: false, completion: nil)
+            }
         }
     }
     

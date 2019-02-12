@@ -44,11 +44,15 @@ class DefaultWidgetAnimator: WidgetAnimator {
                 hiddenFrame = CGRect(origin: CGPoint(x: UIScreen.main.bounds.width,
                                                      y: originalFrame.origin.y),
                                      size: originalFrame.size)
+            case .FadeIn:
+                target.isHidden = true
             }
         }
         
         // 1. set target hiddenframe
-        target.frame = hiddenFrame!
+        if let hiddenFrame = hiddenFrame {
+            target.frame = hiddenFrame
+        }
         
         // 2. run show animation
         UIView.animate(withDuration: animateDuration,
@@ -58,6 +62,7 @@ class DefaultWidgetAnimator: WidgetAnimator {
                        options: [],
                        animations: {
                         target.frame = originalFrame
+                        target.isHidden = false
         }, completion: completion)
         
     }
@@ -97,6 +102,8 @@ class DefaultWidgetAnimator: WidgetAnimator {
                 hiddenFrame = CGRect(origin: CGPoint(x: UIScreen.main.bounds.width,
                                                      y: originalFrame.origin.y),
                                      size: originalFrame.size)
+            case .FadeOut:
+                target.isHidden = false
             }
         }
         
@@ -106,7 +113,11 @@ class DefaultWidgetAnimator: WidgetAnimator {
                        initialSpringVelocity: 0.3,
                        options: [],
                        animations: {
-                        target.frame = hiddenFrame!
+                        if let hiddenFrame = hiddenFrame {
+                            target.frame = hiddenFrame
+                        } else {
+                            target.isHidden = true
+                        }                        
         }, completion: completion)
     }
 }

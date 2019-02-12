@@ -40,23 +40,6 @@ public class ButtonComponent: UIButton {
         }
     }
     
-//    override public var intrinsicContentSize: CGSize {
-//        get {
-//            let original = super.intrinsicContentSize
-//
-//            if let attribute = self.styleAttr.attribute {
-//                return CGSize(width: original.width
-//                    + attribute.boxAttribute.paddingLeft
-//                    + attribute.boxAttribute.paddingRight,
-//                              height: original.height
-//                                + attribute.boxAttribute.paddingTop
-//                                + attribute.boxAttribute.paddingBottom)
-//            } else {
-//                return original
-//            }
-//        }
-//    }
-    
     @IBInspectable public var roleType: String = "normal" {
         willSet {
             if newValue == "radio" {
@@ -97,12 +80,7 @@ public class ButtonComponent: UIButton {
                           userInfo: ["newButtonGroupError": "group already defined"])
         }
     }
-    
-    override public func awakeFromNib() {
-        self.addTarget(self, action: #selector(buttonClicked(sender:)), for: UIControl.Event.touchUpInside)
-        
-    }
-    
+   
     @objc func buttonClicked(sender: UIButton) {
         if sender == self {
             isSelected = !isSelected
@@ -110,6 +88,8 @@ public class ButtonComponent: UIButton {
     }
     
     func decorate() {
+        
+        self.addTarget(self, action: #selector(buttonClicked(sender:)), for: UIControl.Event.touchUpInside)
         
         // Stateless attribute
         if let attribute = Palette.getAttribute(name: self.styleAttr.type, linkState: .normal) {
@@ -194,6 +174,8 @@ public class ButtonComponent: UIButton {
                                                           size: CGSize(width: titleHeight * imageWidthRatio!, height: titleHeight)) {
                             self.setImage(resizedImage.withRenderingMode(.alwaysOriginal),
                                       for: uiState)
+                        } else {
+                            self.setImage(image, for: uiState)
                         }
                     }
                 }
