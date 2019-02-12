@@ -20,6 +20,20 @@ public class LabelComponent: UILabel {
                 decorate()
             }
         }
+    }    
+    
+    public override var text: String? {
+        didSet {
+            // - letter spacing
+            if let text = self.attributedText,
+                let attribute = Palette.getAttribute(name: self.styleAttr.type) {
+                let attrString = NSMutableAttributedString(attributedString: text)
+                attrString.addAttribute(NSAttributedString.Key.kern,
+                                        value: attribute.textAttribute.letterSpacing,
+                                        range: NSRange(location: 0, length: text.length))
+                self.attributedText = attrString.attributedSubstring(from: NSRange(location: 0, length: text.length))
+            }
+        }
     }
     
     func decorate() {
