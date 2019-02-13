@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var loadingIndicator: LoadingIndicatorComponent!
+    @IBOutlet var dropdown: DropdownComponent!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +30,24 @@ class ViewController: UIViewController {
         self.stackView.widthAnchor.constraint(equalTo: self.scrollView.widthAnchor).isActive = true
         
         loadingIndicator.start()
+        
+        self.dropdown.setTitle("toggle", for: .normal)
+        
+        let menu1 = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        menu1.backgroundColor = Palette.dark
+        let menu2 = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        menu2.backgroundColor = Palette.dark
+        let menu3 = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        menu3.backgroundColor = Palette.dark
+        let menu4 = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        menu4.backgroundColor = Palette.dark
+
+        menu1.setTitle("menu1", for: .normal)
+        menu2.setTitle("menu2", for: .normal)
+        menu3.setTitle("menu3", for: .normal)
+        menu4.setTitle("menu4", for: .normal)
+        
+        self.dropdown.addMenuViews(self.stackView, menus: [menu1, menu2, menu3, menu4])
     }
     
     @IBAction func showNotification(_ sender: Any) {

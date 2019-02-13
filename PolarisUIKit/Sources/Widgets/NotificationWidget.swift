@@ -92,7 +92,7 @@ public class NotificationWidget {
         target.view.addSubview(view)
         
         widgetAnimator.showAndHideAfter(after: TimeInterval(time.rawValue),
-                                        target: self.view,
+                                        target: self.view, originFrame: nil,
                                         showFrom: showFrom, hideTo: hideTo,
                                         completion: nil)
     }

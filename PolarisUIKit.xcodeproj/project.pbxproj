@@ -31,6 +31,8 @@
 		FE0CFDC422104A28001B09C2 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = FE55EB5B2209EA810006DC2E /* check.png */; };
 		FE0CFDC522104A2D001B09C2 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED6F9E8220BD53C005C9944 /* ViewController.xib */; };
 		FE0CFDC622104A2D001B09C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED369EF2205706300B4F2A8 /* Assets.xcassets */; };
+		FE8B3D382213E949000F134E /* DropdownComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B3D372213E949000F134E /* DropdownComponent.swift */; };
+		FE8B3D3B2213F64F000F134E /* RippleEffector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B3D3A2213F64F000F134E /* RippleEffector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +63,8 @@
 		FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroupComponent.swift; sourceTree = "<group>"; };
 		FE55EB5B2209EA810006DC2E /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		FE55EB5D220B31480006DC2E /* NotificationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationWidget.swift; sourceTree = "<group>"; };
+		FE8B3D372213E949000F134E /* DropdownComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownComponent.swift; sourceTree = "<group>"; };
+		FE8B3D3A2213F64F000F134E /* RippleEffector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleEffector.swift; sourceTree = "<group>"; };
 		FED369E82205706100B4F2A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED369EA2205706100B4F2A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FED369EF2205706300B4F2A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 				FE55EB4F22083DB10006DC2E /* ViewComponent.swift */,
 				FE55EB5222087CB70006DC2E /* ButtonGroupComponent.swift */,
 				FED6F9EA220C0722005C9944 /* LoadingIndicatorComponent.swift */,
+				FE8B3D372213E949000F134E /* DropdownComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -159,6 +164,14 @@
 				FE0CFD13220EF949001B09C2 /* Widget.swift */,
 			);
 			path = Widgets;
+			sourceTree = "<group>";
+		};
+		FE8B3D392213F637000F134E /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				FE8B3D3A2213F64F000F134E /* RippleEffector.swift */,
+			);
+			path = Effects;
 			sourceTree = "<group>";
 		};
 		FED369DC2205706100B4F2A8 = {
@@ -188,6 +201,7 @@
 				FED369FF220571AE00B4F2A8 /* StyleAttributeCompatible.swift */,
 				FED36A01220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift */,
 				FE0CFD0F220EF526001B09C2 /* UIFont+Advanced.swift */,
+				FE8B3D392213F637000F134E /* Effects */,
 				FE55EB5F220B331B0006DC2E /* Widgets */,
 				FE55EB5122087A360006DC2E /* Components */,
 			);
@@ -309,6 +323,7 @@
 			files = (
 				FE0CFDAB22104845001B09C2 /* Palette.swift in Sources */,
 				FE0CFDAC22104845001B09C2 /* StyleAttributeCompatible.swift in Sources */,
+				FE8B3D382213E949000F134E /* DropdownComponent.swift in Sources */,
 				FE0CFDAD22104845001B09C2 /* UIView+StyleAttributeExtension.swift in Sources */,
 				FE0CFDAE22104845001B09C2 /* UIFont+Advanced.swift in Sources */,
 				FE0CFDAF22104845001B09C2 /* WidgetAnimator.swift in Sources */,
@@ -319,6 +334,7 @@
 				FE0CFDB422104845001B09C2 /* LabelComponent.swift in Sources */,
 				FE0CFDB522104845001B09C2 /* ButtonComponent.swift in Sources */,
 				FE0CFDB622104845001B09C2 /* TextViewComponent.swift in Sources */,
+				FE8B3D3B2213F64F000F134E /* RippleEffector.swift in Sources */,
 				FE0CFDB722104845001B09C2 /* TextFieldComponent.swift in Sources */,
 				FE0CFDB822104845001B09C2 /* ViewComponent.swift in Sources */,
 				FE0CFDB922104845001B09C2 /* ButtonGroupComponent.swift in Sources */,

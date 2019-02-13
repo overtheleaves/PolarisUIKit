@@ -11,9 +11,9 @@ import UIKit
 public protocol WidgetAnimator {
     typealias CompleteHandler = (Bool) -> Void
     func show(_ target: UIView, showFrom: Widget.ShowDirection?, completion: CompleteHandler?)
-    func showAndHideAfter(after: TimeInterval, target: UIView,
-                        showFrom: Widget.ShowDirection?, hideTo: Widget.HideDirection?,
-                        completion: CompleteHandler?)
+    func showAndHideAfter(after: TimeInterval, target: UIView, originFrame: CGRect?,
+                          showFrom: Widget.ShowDirection?, hideTo: Widget.HideDirection?,
+                          completion: CompleteHandler?)
     func hide(_ target: UIView, hideTo: Widget.HideDirection?, completion: CompleteHandler?)
 }
 
@@ -46,6 +46,9 @@ class DefaultWidgetAnimator: WidgetAnimator {
                                      size: originalFrame.size)
             case .FadeIn:
                 target.isHidden = true
+                
+            case .FadeInScale:
+                target.transform = CGAffineTransform(scaleX: 0, y: 0)
             }
         }
         
@@ -61,13 +64,18 @@ class DefaultWidgetAnimator: WidgetAnimator {
                        initialSpringVelocity: 0.3,
                        options: [],
                        animations: {
-                        target.frame = originalFrame
-                        target.isHidden = false
+                        if showFrom == .FadeIn {
+                            target.isHidden = false
+                        } else if showFrom == .FadeInScale {
+                            target.transform = CGAffineTransform.identity
+                        } else {
+                            target.frame = originalFrame
+                        }
         }, completion: completion)
         
     }
     
-    func showAndHideAfter(after: TimeInterval, target: UIView,
+    func showAndHideAfter(after: TimeInterval, target: UIView, originFrame: CGRect?,
                           showFrom: Widget.ShowDirection? = .FromTop, hideTo: Widget.HideDirection? = .ToTop,
                           completion: CompleteHandler?) {
         
@@ -104,6 +112,11 @@ class DefaultWidgetAnimator: WidgetAnimator {
                                      size: originalFrame.size)
             case .FadeOut:
                 target.isHidden = false
+                
+            case .FadeOutScale:
+                hiddenFrame = CGRect(origin: CGPoint(x: originalFrame.origin.x + (originalFrame.width) / 2,
+                                              y: originalFrame.origin.y + (originalFrame.height) / 2),
+                              size: CGSize.zero)
             }
         }
         

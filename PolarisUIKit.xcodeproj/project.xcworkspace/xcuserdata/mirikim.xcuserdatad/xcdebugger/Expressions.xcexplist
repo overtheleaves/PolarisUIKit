@@ -3,30 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "InternalPopupWidget.show(_:close:completion:):PopupWidget.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.view.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "ViewController.viewDidLoad():ViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "loadingIndicator">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "PopupWidget.init(header:content:attribute:):PopupWidget.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "closeButton.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "AttributedUILabel.type.setter:AttributedUILabel.swift">
          <PersistentStrings>
             <PersistentString
@@ -35,62 +11,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "PopupWidget.show(_:close:completion:):PopupWidget.swift">
+         contextName = "ViewController.viewDidLoad():ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "okButton.frame">
-            </PersistentString>
-            <PersistentString
-               value = "view.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SwitcherComponent.decorate():SwitcherComponent.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "currentSegmentIndex">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SwitcherComponent.valueChanged():SwitcherComponent.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "sortedViews">
-            </PersistentString>
-            <PersistentString
-               value = "selectedSegmentIndex">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in LoadingIndicatorComponent.run(rotateDegree:step:totalStep:):LoadingIndicatorComponent.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "CGFloat.pi / 180 * rotateDegree">
-            </PersistentString>
-            <PersistentString
-               value = "CGFloat(CGFloat.pi / 180 * rotateDegree)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "AttributedUILabel.drawText(in:):AttributedUILabel.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.styleAttr.attribute">
-            </PersistentString>
-            <PersistentString
-               value = "self.styleAttr.type">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "AttributedTextField.initialize():AttributedTextField.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "boxLayer.frame">
+               value = "loadingIndicator">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -106,18 +30,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "AttributedView.initialize():AttributedView.swift">
+         contextName = "AttributedButton.contentRect(forBounds:):AttributedButton.swift">
          <PersistentStrings>
             <PersistentString
-               value = "decorateLayer.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "NotificationWidget.init(header:content:attribute:):NotificationWidget.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "view.frame">
+               value = "super.contentRect(forBounds: bounds)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -130,10 +46,118 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "DropdownComponent.toggleSelected(_:):DropdownComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.dropdownMenuContentView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SwitcherComponent.decorate():SwitcherComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentSegmentIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DropdownComponent.drawDropdownMenu(_:):DropdownComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dropdownMenuContentView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AttributedView.initialize():AttributedView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "decorateLayer.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PopupWidget.init(header:content:attribute:):PopupWidget.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "closeButton.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NotificationWidget.init(header:content:attribute:):NotificationWidget.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AttributedButton.type.setter:AttributedButton.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.titleEdgeInsets">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "InternalPopupWidget.show(_:close:completion:):PopupWidget.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DropdownComponent.drawDropdownMenu():DropdownComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.dropdownMenuContentView.arrangedSubviews">
+            </PersistentString>
+            <PersistentString
+               value = "self.dropdownMenuContentView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SwitcherComponent.valueChanged():SwitcherComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sortedViews">
+            </PersistentString>
+            <PersistentString
+               value = "selectedSegmentIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AttributedTextField.initialize():AttributedTextField.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "boxLayer.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PopupWidget.show(_:close:completion:):PopupWidget.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "okButton.frame">
+            </PersistentString>
+            <PersistentString
+               value = "view.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AttributedUILabel.drawText(in:):AttributedUILabel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.styleAttr.attribute">
+            </PersistentString>
+            <PersistentString
+               value = "self.styleAttr.type">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -152,10 +176,38 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "AttributedButton.contentRect(forBounds:):AttributedButton.swift">
+         contextName = "DropdownComponent.show():DropdownComponent.swift">
          <PersistentStrings>
             <PersistentString
-               value = "super.contentRect(forBounds: bounds)">
+               value = "            self.dropdownMenuContentView.intrinsicContentSize&#10;            self.dropdownMenuContentView.intrinsicContentSize&#10;dropdownMenuContentView.intrinsicContentSize">
+            </PersistentString>
+            <PersistentString
+               value = "dropdownMenuContentView.frame">
+            </PersistentString>
+            <PersistentString
+               value = "UIScreen.main.bounds">
+            </PersistentString>
+            <PersistentString
+               value = "screenHeight - toggleViewY">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DefaultWidgetAnimator.show(_:originFrame:showFrom:completion:):WidgetAnimator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "target.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in LoadingIndicatorComponent.run(rotateDegree:step:totalStep:):LoadingIndicatorComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "CGFloat.pi / 180 * rotateDegree">
+            </PersistentString>
+            <PersistentString
+               value = "CGFloat(CGFloat.pi / 180 * rotateDegree)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

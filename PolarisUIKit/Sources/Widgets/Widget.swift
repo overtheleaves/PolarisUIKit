@@ -14,6 +14,7 @@ public class Widget {
         case FromLeft
         case FromRight
         case FadeIn
+        case FadeInScale
     }
     
     public enum HideDirection {
@@ -22,5 +23,6 @@ public class Widget {
         case ToLeft
         case ToRight
         case FadeOut
+        case FadeOutScale
     }
 }
