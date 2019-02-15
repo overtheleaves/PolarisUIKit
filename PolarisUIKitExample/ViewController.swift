@@ -31,23 +31,35 @@ class ViewController: UIViewController {
         
         loadingIndicator.start()
         
-        self.dropdown.setTitle("toggle", for: .normal)
+        let dropdownEvenAttr = StyleAttribute()
+        dropdownEvenAttr.backgroundAttribute.color = Palette.lightBlue
+        dropdownEvenAttr.textAttribute.color = Palette.lightGray
+        dropdownEvenAttr.boxAttribute.padding = 10.0
+        Palette.addAttribute("dropdownAttr.even", attribute: dropdownEvenAttr)
         
-        let menu1 = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
-        menu1.backgroundColor = Palette.dark
-        let menu2 = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
-        menu2.backgroundColor = Palette.dark
-        let menu3 = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
-        menu3.backgroundColor = Palette.dark
-        let menu4 = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
-        menu4.backgroundColor = Palette.dark
-
-        menu1.setTitle("menu1", for: .normal)
-        menu2.setTitle("menu2", for: .normal)
-        menu3.setTitle("menu3", for: .normal)
-        menu4.setTitle("menu4", for: .normal)
+        let placeholder = LabelComponent(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        placeholder.text = "select"
+        placeholder.styleType = "dropdownAttr.even"
+        self.dropdown.placeholderView = placeholder
+        self.dropdown.direction = .vertical
         
-        self.dropdown.addMenuViews(self.stackView, menus: [menu1, menu2, menu3, menu4])
+        let menu1 = LabelComponent(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        menu1.text = "menu1"
+        menu1.styleType = "blueAttr"
+        
+        let menu2 = LabelComponent(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        menu2.text = "menu2"
+        menu2.styleType = "dropdownAttr.even"
+        
+        let menu3 = LabelComponent(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        menu3.text = "menu3"
+        menu3.styleType = "blueAttr"
+        
+        let menu4 = LabelComponent(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        menu4.text = "menu4"
+        menu4.styleType = "dropdownAttr.even"
+        
+        self.dropdown.addMenuViews(self.stackView, menuContentViews: [menu1, menu2, menu3, menu4])
     }
     
     @IBAction func showNotification(_ sender: Any) {

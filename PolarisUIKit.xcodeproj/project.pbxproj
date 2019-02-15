@@ -33,6 +33,9 @@
 		FE0CFDC622104A2D001B09C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED369EF2205706300B4F2A8 /* Assets.xcassets */; };
 		FE8B3D382213E949000F134E /* DropdownComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B3D372213E949000F134E /* DropdownComponent.swift */; };
 		FE8B3D3B2213F64F000F134E /* RippleEffector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B3D3A2213F64F000F134E /* RippleEffector.swift */; };
+		FE8B3D4122165D74000F134E /* dropdown_on.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8B3D3F22165D74000F134E /* dropdown_on.png */; };
+		FE8B3D4222165D74000F134E /* dropdown_off.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8B3D4022165D74000F134E /* dropdown_off.png */; };
+		FE8B3D4422165DCC000F134E /* UIImageView+Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B3D4322165DCC000F134E /* UIImageView+Advanced.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +68,9 @@
 		FE55EB5D220B31480006DC2E /* NotificationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationWidget.swift; sourceTree = "<group>"; };
 		FE8B3D372213E949000F134E /* DropdownComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownComponent.swift; sourceTree = "<group>"; };
 		FE8B3D3A2213F64F000F134E /* RippleEffector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleEffector.swift; sourceTree = "<group>"; };
+		FE8B3D3F22165D74000F134E /* dropdown_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_on.png; sourceTree = "<group>"; };
+		FE8B3D4022165D74000F134E /* dropdown_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_off.png; sourceTree = "<group>"; };
+		FE8B3D4322165DCC000F134E /* UIImageView+Advanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Advanced.swift"; sourceTree = "<group>"; };
 		FED369E82205706100B4F2A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED369EA2205706100B4F2A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FED369EF2205706300B4F2A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,6 +155,8 @@
 		FE55EB542209283C0006DC2E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FE8B3D4022165D74000F134E /* dropdown_off.png */,
+				FE8B3D3F22165D74000F134E /* dropdown_on.png */,
 				FED6F9EE220C7933005C9944 /* close.png */,
 				FE55EB5B2209EA810006DC2E /* check.png */,
 			);
@@ -201,6 +209,7 @@
 				FED369FF220571AE00B4F2A8 /* StyleAttributeCompatible.swift */,
 				FED36A01220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift */,
 				FE0CFD0F220EF526001B09C2 /* UIFont+Advanced.swift */,
+				FE8B3D4322165DCC000F134E /* UIImageView+Advanced.swift */,
 				FE8B3D392213F637000F134E /* Effects */,
 				FE55EB5F220B331B0006DC2E /* Widgets */,
 				FE55EB5122087A360006DC2E /* Components */,
@@ -309,7 +318,9 @@
 			files = (
 				FE0CFDC522104A2D001B09C2 /* ViewController.xib in Resources */,
 				FE0CFDC622104A2D001B09C2 /* Assets.xcassets in Resources */,
+				FE8B3D4222165D74000F134E /* dropdown_off.png in Resources */,
 				FE0CFDC322104A28001B09C2 /* close.png in Resources */,
+				FE8B3D4122165D74000F134E /* dropdown_on.png in Resources */,
 				FE0CFDC422104A28001B09C2 /* check.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +339,7 @@
 				FE0CFDAE22104845001B09C2 /* UIFont+Advanced.swift in Sources */,
 				FE0CFDAF22104845001B09C2 /* WidgetAnimator.swift in Sources */,
 				FE0CFDB022104845001B09C2 /* NotificationWidget.swift in Sources */,
+				FE8B3D4422165DCC000F134E /* UIImageView+Advanced.swift in Sources */,
 				FE0CFDB122104845001B09C2 /* PopupWidget.swift in Sources */,
 				FE0CFDB222104845001B09C2 /* Widget.swift in Sources */,
 				FE0CFDB322104845001B09C2 /* SegmentedComponent.swift in Sources */,

@@ -113,10 +113,7 @@ class DefaultWidgetAnimator: WidgetAnimator {
             case .FadeOut:
                 target.isHidden = false
                 
-            case .FadeOutScale:
-                hiddenFrame = CGRect(origin: CGPoint(x: originalFrame.origin.x + (originalFrame.width) / 2,
-                                              y: originalFrame.origin.y + (originalFrame.height) / 2),
-                              size: CGSize.zero)
+            default: break
             }
         }
         
@@ -126,11 +123,15 @@ class DefaultWidgetAnimator: WidgetAnimator {
                        initialSpringVelocity: 0.3,
                        options: [],
                        animations: {
-                        if let hiddenFrame = hiddenFrame {
-                            target.frame = hiddenFrame
-                        } else {
+                        if hideTo == .FadeOut {
                             target.isHidden = true
-                        }                        
+                        } else if hideTo == .FadeOutScale {
+                            target.transform = CGAffineTransform(scaleX: 0, y: 0)
+                        } else {
+                            if let hiddenFrame = hiddenFrame {
+                                target.frame = hiddenFrame
+                            }
+                        }
         }, completion: completion)
     }
 }

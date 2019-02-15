@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "DropdownComponent.initialize():DropdownComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "rightIconImageView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AttributedUILabel.type.setter:AttributedUILabel.swift">
          <PersistentStrings>
             <PersistentString
@@ -113,10 +121,41 @@
          contextName = "DropdownComponent.drawDropdownMenu():DropdownComponent.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.dropdownMenuContentView.arrangedSubviews">
+               value = "self.menuViews[0].subViews[0].frame">
             </PersistentString>
             <PersistentString
                value = "self.dropdownMenuContentView.frame">
+            </PersistentString>
+            <PersistentString
+               value = "menu.subviews[0].frame">
+            </PersistentString>
+            <PersistentString
+               value = "self.dropdownMenuContentView.arrangedSubviews">
+            </PersistentString>
+            <PersistentString
+               value = "menu.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DropdownComponent.addMenuViews(_:menuContentViews:):DropdownComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DropdownComponent.stackViewSize(_:):DropdownComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.frame">
+            </PersistentString>
+            <PersistentString
+               value = "view.subviews[0].frame">
+            </PersistentString>
+            <PersistentString
+               value = "self.menuViews[0].subviews[0].frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -136,6 +175,33 @@
          <PersistentStrings>
             <PersistentString
                value = "boxLayer.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DropdownComponent.setAnchorPoint(_:anchorPoint:):DropdownComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "layer.anchorPoint">
+            </PersistentString>
+            <PersistentString
+               value = "layer.position">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DropdownComponent.placeholderView.didset:DropdownComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "newView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DropdownComponent.showDropdownMenu():DropdownComponent.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dropdownMenuWrapperView.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -179,16 +245,28 @@
          contextName = "DropdownComponent.show():DropdownComponent.swift">
          <PersistentStrings>
             <PersistentString
-               value = "            self.dropdownMenuContentView.intrinsicContentSize&#10;            self.dropdownMenuContentView.intrinsicContentSize&#10;dropdownMenuContentView.intrinsicContentSize">
+               value = "contentViewSize">
+            </PersistentString>
+            <PersistentString
+               value = "dropdownMenuContentView.layer.position">
             </PersistentString>
             <PersistentString
                value = "dropdownMenuContentView.frame">
             </PersistentString>
             <PersistentString
+               value = "self.menuViews[0].frame">
+            </PersistentString>
+            <PersistentString
+               value = "            self.dropdownMenuContentView.intrinsicContentSize&#10;            self.dropdownMenuContentView.intrinsicContentSize&#10;dropdownMenuContentView.intrinsicContentSize">
+            </PersistentString>
+            <PersistentString
                value = "UIScreen.main.bounds">
             </PersistentString>
             <PersistentString
-               value = "screenHeight - toggleViewY">
+               value = "dropdownMenuContentView.layer.anchorPoint">
+            </PersistentString>
+            <PersistentString
+               value = "self.menuViews[0].subViews[0].frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

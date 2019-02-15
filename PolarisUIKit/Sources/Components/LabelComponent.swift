@@ -78,7 +78,7 @@ public class LabelComponent: UILabel {
 //            self.layer.borderColor = attribute.boxAttribute.borderColor.cgColor
 //
             Palette.decorateLayer(self.layer, view: self, attribute: attribute)
-            self.sizeToFit()
+            //self.sizeToFit()
         }
     }
     
