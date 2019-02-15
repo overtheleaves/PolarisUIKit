@@ -109,6 +109,7 @@
 		FE0CFD6E221044C8001B09C2 /* PolarisUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				FE55EB542209283C0006DC2E /* Resources */,
 				FED369FA2205707400B4F2A8 /* Sources */,
 				FE0CFD6F221044C8001B09C2 /* PolarisUIKit.h */,
 				FE0CFD70221044C8001B09C2 /* Info.plist */,
@@ -119,7 +120,6 @@
 		FE0CFD9022104506001B09C2 /* PolarisUIKitExample */ = {
 			isa = PBXGroup;
 			children = (
-				FE55EB542209283C0006DC2E /* Resources */,
 				FED369E82205706100B4F2A8 /* AppDelegate.swift */,
 				FED369EA2205706100B4F2A8 /* ViewController.swift */,
 				FED6F9E8220BD53C005C9944 /* ViewController.xib */,

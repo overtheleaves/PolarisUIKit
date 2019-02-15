@@ -6,9 +6,9 @@
 //  Copyright © 2019 overtheleaves. All rights reserved.
 //
 
-import Foundation
+import UIKit 
 
-extension UIImageView {    
+extension UIImageView {
     func maskImageColor(color: UIColor) {
         let templateImage = self.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
         self.image = templateImage
