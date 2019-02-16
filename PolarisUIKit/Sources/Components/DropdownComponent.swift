@@ -200,18 +200,29 @@ public class DropdownComponent: UIControl {
     }
     
     func drawDropdownMenu() {
+        
+        // remove targets
+        for view in self.dropdownMenuContentView.subviews {
+            if let menu = view as? UIControl {
+                menu.removeTarget(self, action: #selector(menuSelected(_:)), for: .touchUpInside)
+            }
+        }
+        
         // remove all views
         for view in self.dropdownMenuContentView.subviews {
             view.removeFromSuperview()
         }
         
         for menu in self.menuViews {
-            // intrinsic content size
             menu.translatesAutoresizingMaskIntoConstraints = false
             
             self.dropdownMenuContentView.addArrangedSubview(menu)
+
+            // intrinsic content size
             menu.widthAnchor.constraint(equalToConstant: menu.frame.width).isActive = true
             menu.heightAnchor.constraint(equalToConstant: menu.frame.height).isActive = true
+            
+            // add touch event target
             menu.addTarget(self, action: #selector(menuSelected(_:)), for: .touchUpInside)
         }
         
@@ -259,14 +270,14 @@ public class DropdownComponent: UIControl {
                 // use bottonAnchor
                 self.dropdownMenuWrapperView.bottomAnchor
                     .constraint(equalTo: self.topAnchor,
-                                constant: contentViewSize.height / 2 - 10)
+                                constant: contentViewSize.height / 2 - 2)
                     .isActive = true
                 setAnchorPoint(self.dropdownMenuWrapperView.layer, anchorPoint: CGPoint(x: 0.5, y: 1))
             } else {
                 // not exceed, use topAnchor
                 self.dropdownMenuWrapperView.topAnchor
                     .constraint(equalTo: self.bottomAnchor,
-                                constant: -contentViewSize.height / 2 + 10)
+                                constant: -contentViewSize.height / 2 + 2)
                     .isActive = true
                 
                 setAnchorPoint(self.dropdownMenuWrapperView.layer, anchorPoint: CGPoint(x: 0.5, y: 0))
@@ -302,7 +313,7 @@ public class DropdownComponent: UIControl {
         
         // replace placeholder
         self.placeholderView?.removeFromSuperview()
-        if let snapshot = self.menuViews[index].snapshotView(afterScreenUpdates: false) {
+        if let snapshot = self.menuViews[index].snapshotView(afterScreenUpdates: true) {
             self.placeholderWrapperView.addSubview(snapshot)
         }
         
