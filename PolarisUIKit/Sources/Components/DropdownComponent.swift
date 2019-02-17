@@ -119,6 +119,10 @@ public class DropdownComponent: UIControl {
     private var target: UIView?
     private let widgetAnimator: WidgetAnimator = DefaultWidgetAnimator()
     
+    // constraints
+    var dropdownMenuWrapperViewWidthConstraint: NSLayoutConstraint?
+    var dropdownMenuWrapperViewHeightConstraint: NSLayoutConstraint?
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
@@ -258,8 +262,19 @@ public class DropdownComponent: UIControl {
             let toggleViewHeight = self.frame.height
             let contentViewSize = stackViewSize(self.dropdownMenuContentView)
             
-            self.dropdownMenuWrapperView.widthAnchor.constraint(equalToConstant: contentViewSize.width).isActive = true
-            self.dropdownMenuWrapperView.heightAnchor.constraint(equalToConstant: contentViewSize.height).isActive = true
+            if let widthConstraint = dropdownMenuWrapperViewWidthConstraint {
+                widthConstraint.isActive = false
+            }
+            
+            if let heightConstraint = dropdownMenuWrapperViewHeightConstraint {
+                heightConstraint.isActive = false
+            }
+            
+            self.dropdownMenuWrapperViewWidthConstraint = self.dropdownMenuWrapperView.widthAnchor.constraint(equalToConstant: contentViewSize.width)
+            self.dropdownMenuWrapperViewHeightConstraint =  self.dropdownMenuWrapperView.heightAnchor.constraint(equalToConstant: contentViewSize.height)
+            
+            self.dropdownMenuWrapperViewWidthConstraint!.isActive = true
+            self.dropdownMenuWrapperViewHeightConstraint!.isActive = true            
             
             // 1. check width and add leading or trailing anchor
             if toggleViewX + contentViewSize.width > targetWidth {
