@@ -60,6 +60,8 @@ class ViewController: UIViewController {
         menu4.styleType = "dropdownAttr.even"
         
         self.dropdown.addMenuViews(self.stackView, menuContentViews: [menu1, menu2, menu3, menu4])
+        self.dropdown.onRightIconColor = Palette.darkBlue
+        self.dropdown.offRightIconColor = Palette.darkBlue
     }
     
     @IBAction func showNotification(_ sender: Any) {

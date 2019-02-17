@@ -76,8 +76,21 @@ public class DropdownComponent: UIControl {
         }
     }
     
-    public var onRightIconColor: UIColor = Palette.lightGray
-    public var offRightIconColor: UIColor = Palette.lightGray
+    public var onRightIconColor: UIColor = Palette.lightGray {
+        didSet {
+            // change current color
+            if isOpened {
+                self.rightIconImageView.maskImageColor(color: self.onRightIconColor)
+            }
+        }
+    }
+    public var offRightIconColor: UIColor = Palette.lightGray {
+        didSet {
+            if !isOpened {
+                self.rightIconImageView.maskImageColor(color: self.offRightIconColor)
+            }
+        }
+    }
     
     private var onRightIcon: UIImage? = UIImage(named: "dropdown_on")
     private var offRightIcon: UIImage? = UIImage(named: "dropdown_off")
