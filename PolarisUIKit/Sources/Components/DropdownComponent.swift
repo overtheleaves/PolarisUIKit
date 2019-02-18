@@ -341,7 +341,7 @@ public class DropdownComponent: UIControl {
         
         // replace placeholder
         self.placeholderView?.removeFromSuperview()
-        if let snapshot = self.menuViews[index].snapshotView(afterScreenUpdates: true) {
+        if let snapshot = self.menuViews[index].snapshotView(afterScreenUpdates: false) {
             self.placeholderWrapperView.addSubview(snapshot)
         }
         
