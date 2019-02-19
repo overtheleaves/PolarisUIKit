@@ -213,10 +213,6 @@ public class DropdownComponent: UIControl {
         }
         
         self.target = target
-        drawDropdownMenu()
-    }
-    
-    func drawDropdownMenu() {
         
         // remove targets
         for view in self.dropdownMenuContentView.subviews {
@@ -234,7 +230,7 @@ public class DropdownComponent: UIControl {
             menu.translatesAutoresizingMaskIntoConstraints = false
             
             self.dropdownMenuContentView.addArrangedSubview(menu)
-
+            
             // intrinsic content size
             menu.widthAnchor.constraint(equalToConstant: menu.frame.width).isActive = true
             menu.heightAnchor.constraint(equalToConstant: menu.frame.height).isActive = true
@@ -244,16 +240,13 @@ public class DropdownComponent: UIControl {
         }
         
         self.dropdownMenuContentView.sizeToFit()
-    }
-    
-    
-    /// show dropdown menu
-    ///
-    func showDropdownMenu() {
+        
+        // add view
+        target.addSubview(self.dropdownMenuWrapperView)
+        
+        // contraints
         if let target = self.target {
             let toggleViewFrame = self.frame
-            
-            target.addSubview(self.dropdownMenuWrapperView)
             
             let targetWidth = target.frame.width
             let targetHeight = target.frame.height
@@ -274,7 +267,7 @@ public class DropdownComponent: UIControl {
             self.dropdownMenuWrapperViewHeightConstraint =  self.dropdownMenuWrapperView.heightAnchor.constraint(equalToConstant: contentViewSize.height)
             
             self.dropdownMenuWrapperViewWidthConstraint!.isActive = true
-            self.dropdownMenuWrapperViewHeightConstraint!.isActive = true            
+            self.dropdownMenuWrapperViewHeightConstraint!.isActive = true
             
             // 1. check width and add leading or trailing anchor
             if toggleViewX + contentViewSize.width > targetWidth {
@@ -312,10 +305,17 @@ public class DropdownComponent: UIControl {
             }
             
             self.dropdownMenuWrapperView.layoutIfNeeded()
-            
-            widgetAnimator.show(self.dropdownMenuWrapperView,
-                                showFrom: .FadeInScale, completion: nil)
+            self.dropdownMenuWrapperView.transform = CGAffineTransform(scaleX: 0, y: 0)
         }
+    }
+
+    
+    /// show dropdown menu
+    ///
+    func showDropdownMenu() {
+        widgetAnimator.show(self.dropdownMenuWrapperView,
+                            showFrom: .FadeInScale, completion: nil)
+        
     }
     
     
@@ -357,9 +357,7 @@ public class DropdownComponent: UIControl {
     ///
     func hideDropdownMenu() {
         widgetAnimator.hide(self.dropdownMenuWrapperView,
-                            hideTo: .FadeOutScale, completion: { (success) in
-                                self.dropdownMenuWrapperView.removeFromSuperview()
-        })
+                            hideTo: .FadeOutScale, completion: nil)
     }
     
     
