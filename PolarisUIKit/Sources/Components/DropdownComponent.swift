@@ -243,8 +243,12 @@ public class DropdownComponent: UIControl {
         
         // add view
         target.addSubview(self.dropdownMenuWrapperView)
-        
-        // contraints
+    }
+
+    
+    /// show dropdown menu
+    ///
+    func showDropdownMenu() {
         if let target = self.target {
             let toggleViewFrame = self.frame
             
@@ -267,7 +271,7 @@ public class DropdownComponent: UIControl {
             self.dropdownMenuWrapperViewHeightConstraint =  self.dropdownMenuWrapperView.heightAnchor.constraint(equalToConstant: contentViewSize.height)
             
             self.dropdownMenuWrapperViewWidthConstraint!.isActive = true
-            self.dropdownMenuWrapperViewHeightConstraint!.isActive = true
+            self.dropdownMenuWrapperViewHeightConstraint!.isActive = true            
             
             // 1. check width and add leading or trailing anchor
             if toggleViewX + contentViewSize.width > targetWidth {
@@ -305,17 +309,10 @@ public class DropdownComponent: UIControl {
             }
             
             self.dropdownMenuWrapperView.layoutIfNeeded()
-            self.dropdownMenuWrapperView.transform = CGAffineTransform(scaleX: 0, y: 0)
+            
+            widgetAnimator.show(self.dropdownMenuWrapperView,
+                                showFrom: .FadeInScale, completion: nil)
         }
-    }
-
-    
-    /// show dropdown menu
-    ///
-    func showDropdownMenu() {
-        widgetAnimator.show(self.dropdownMenuWrapperView,
-                            showFrom: .FadeInScale, completion: nil)
-        
     }
     
     
