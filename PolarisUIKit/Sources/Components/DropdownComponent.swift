@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import PolarisFramework
 
 public class DropdownComponent: UIControl {
     
-    public typealias MenuSelectedHandler = (Int) -> Void
+//    public typealias MenuSelectedHandler = (Int) -> Void
     
     public enum Direction {
         case vertical
         case horizontal
+    }
+    
+    private var selection: Int = 0 {
+        didSet {
+            self.placeholderView?.removeFromSuperview()
+            if let snapshot = self.menuViews[selection].snapshotView(afterScreenUpdates: false) {
+                self.placeholderWrapperView.addSubview(snapshot)
+            }
+        }
     }
     
     private var placeholderAttribute: StyleAttribute?
@@ -60,7 +70,7 @@ public class DropdownComponent: UIControl {
         }
     }
     
-    public var menuSelectedHandler: MenuSelectedHandler?
+//    public var menuSelectedHandler: MenuSelectedHandler?
     
     private var placeholderWrapperView: UIView = UIView()
     public var placeholderView: UIView? {
@@ -329,25 +339,28 @@ public class DropdownComponent: UIControl {
             }
         }
         
-        setSelection(index: i, invokeSelectedHandler: true)
+        //setSelection(index: i, invokeSelectedHandler: true)
+        self.selection = i
         self.isOpened = false
     }
     
     
-    public func setSelection(index: Int, invokeSelectedHandler: Bool) {
+//    public func setSelection(index: Int, invokeSelectedHandler: Bool) {
+        
+        //self.selection = index
         
         // replace placeholder
-        self.placeholderView?.removeFromSuperview()
-        if let snapshot = self.menuViews[index].snapshotView(afterScreenUpdates: false) {
-            self.placeholderWrapperView.addSubview(snapshot)
-        }
+//        self.placeholderView?.removeFromSuperview()
+//        if let snapshot = self.menuViews[index].snapshotView(afterScreenUpdates: false) {
+//            self.placeholderWrapperView.addSubview(snapshot)
+//        }
         
-        if invokeSelectedHandler {
-            if let handler = menuSelectedHandler {
-                handler(index)
-            }
-        }
-    }
+//        if invokeSelectedHandler {
+//            if let handler = menuSelectedHandler {
+//                handler(index)
+//            }
+//        }
+//    }
     
     
     /// hide dropdown menu
@@ -407,5 +420,19 @@ public class DropdownComponent: UIControl {
             
             return CGSize(width: totalWidth, height: maxHeight)
         }
+    }
+}
+
+
+extension DropdownComponent: Bindable {
+    
+    public typealias BindingType = Int
+    
+    public func observingValue() -> Int? {
+        return self.selection
+    }
+    
+    public func updateValue(_ value: Int) {
+        self.selection = value
     }
 }
