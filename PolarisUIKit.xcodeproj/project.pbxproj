@@ -36,6 +36,11 @@
 		FE8B3D4122165D74000F134E /* dropdown_on.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8B3D3F22165D74000F134E /* dropdown_on.png */; };
 		FE8B3D4222165D74000F134E /* dropdown_off.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8B3D4022165D74000F134E /* dropdown_off.png */; };
 		FE8B3D4422165DCC000F134E /* UIImageView+Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B3D4322165DCC000F134E /* UIImageView+Advanced.swift */; };
+		FEF70BA7221FCB16002831FB /* PolarisFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF70BA6221FCB16002831FB /* PolarisFramework.framework */; };
+		FEF70BA8221FCB2B002831FB /* PolarisFramework.framework in Resources */ = {isa = PBXBuildFile; fileRef = FEF70BA6221FCB16002831FB /* PolarisFramework.framework */; };
+		FEF70BA9221FCC71002831FB /* PolarisFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FEF70BA6221FCB16002831FB /* PolarisFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FEF70BAF221FCD67002831FB /* CouchbaseLiteSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF70BAE221FCD67002831FB /* CouchbaseLiteSwift.framework */; };
+		FEF70BB0221FCD6B002831FB /* CouchbaseLiteSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FEF70BAE221FCD67002831FB /* CouchbaseLiteSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +50,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FEF70BB0221FCD6B002831FB /* CouchbaseLiteSwift.framework in Embed Frameworks */,
+				FEF70BA9221FCC71002831FB /* PolarisFramework.framework in Embed Frameworks */,
 				FE0CFDBF22104926001B09C2 /* PolarisUIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -86,6 +93,8 @@
 		FED6F9EA220C0722005C9944 /* LoadingIndicatorComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorComponent.swift; sourceTree = "<group>"; };
 		FED6F9EC220C4EC8005C9944 /* PopupWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupWidget.swift; sourceTree = "<group>"; };
 		FED6F9EE220C7933005C9944 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		FEF70BA6221FCB16002831FB /* PolarisFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PolarisFramework.framework; sourceTree = "<group>"; };
+		FEF70BAE221FCD67002831FB /* CouchbaseLiteSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLiteSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF70BAF221FCD67002831FB /* CouchbaseLiteSwift.framework in Frameworks */,
+				FEF70BA7221FCB16002831FB /* PolarisFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +196,8 @@
 		FED369DC2205706100B4F2A8 = {
 			isa = PBXGroup;
 			children = (
+				FEF70BAE221FCD67002831FB /* CouchbaseLiteSwift.framework */,
+				FEF70BA6221FCB16002831FB /* PolarisFramework.framework */,
 				FED369FB220570E400B4F2A8 /* Package.swift */,
 				FE0CFD6E221044C8001B09C2 /* PolarisUIKit */,
 				FE0CFD9022104506001B09C2 /* PolarisUIKitExample */,
@@ -309,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF70BA8221FCB2B002831FB /* PolarisFramework.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +383,7 @@
 		FE0CFD73221044C8001B09C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -377,6 +392,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PolarisUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -398,6 +417,7 @@
 		FE0CFD74221044C8001B09C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -406,6 +426,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PolarisUIKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

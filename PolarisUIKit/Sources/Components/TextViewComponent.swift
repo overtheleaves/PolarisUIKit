@@ -6,9 +6,10 @@
 //  Copyright © 2019 overtheleaves. All rights reserved.
 //
 
+import PolarisFramework
 import UIKit
 
-class TextViewComponent: UITextView {
+class TextViewComponent: BindableTextView {
     
     @IBInspectable public var styleType: String {
         get {

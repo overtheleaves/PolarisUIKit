@@ -1,0 +1,11 @@
+framework module PolarisFramework {
+  umbrella header "PolarisFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module PolarisFramework.Swift {
+    header "PolarisFramework-Swift.h"
+    requires objc
+}
