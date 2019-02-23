@@ -24,6 +24,7 @@ public class DropdownComponent: UIControl {
             if let snapshot = self.menuViews[selection].snapshotView(afterScreenUpdates: false) {
                 self.placeholderWrapperView.addSubview(snapshot)
             }
+            self.sendActions(for: .valueChanged)
         }
     }
     
