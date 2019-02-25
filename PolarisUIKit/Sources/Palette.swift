@@ -45,7 +45,8 @@ public class Palette {
     public static let darkGray: UIColor = UIColor(red: 192/255, green: 199/255, blue: 218/255, alpha: 1.0)
 
     public static let text: UIColor = UIColor(red: 87/255, green: 96/255, blue: 119/255, alpha: 1.0)
-    public static let dimmed: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+    public static let blackDimmed: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+    public static let whiteDimmed: UIColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.3)
     
     public static var defaultFont = UIFont.systemFont(ofSize: UIFont.systemFontSize)
     

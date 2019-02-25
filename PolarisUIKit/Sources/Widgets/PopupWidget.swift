@@ -108,7 +108,7 @@ class InternalPopupWidget {
         view.addSubview(self.contentLabel)
         
         // background view
-        backgroundView.backgroundColor = Palette.dimmed
+        backgroundView.backgroundColor = Palette.blackDimmed
         backgroundView.isUserInteractionEnabled = false // disable dimmed area
         
         // attribute
