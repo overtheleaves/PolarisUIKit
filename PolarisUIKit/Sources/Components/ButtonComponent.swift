@@ -118,8 +118,9 @@ public class ButtonComponent: UIButton {
         var titleHeight: CGFloat = self.frame.height
         
         if let titleLabel = self.titleLabel {
-            titleHeight = titleLabel.frame.height
+            titleHeight = titleLabel.frame.height < titleHeight ? titleLabel.frame.height : titleHeight
         }
+        
         
         for (linkState, uiStates) in stateMapping {
             
@@ -183,7 +184,7 @@ public class ButtonComponent: UIButton {
                               width: width,
                               height: height)
             
-            iv.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
+            //iv.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
             iv.layer.cornerRadius = 2.0
             
             iv.contentMode = .scaleAspectFit
