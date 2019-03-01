@@ -60,6 +60,7 @@ class ViewController: UIViewController {
         menu4.styleType = "dropdownAttr.even"
         
         self.dropdown.addMenuViews(self.stackView, menuContentViews: [menu1, menu2, menu3, menu4])
+        self.dropdown.onOffRightIcons = (on: UIImage(named: "dropdown_on")!, off: UIImage(named: "dropdown_off")!)
         self.dropdown.onRightIconColor = Palette.darkBlue
         self.dropdown.offRightIconColor = Palette.darkBlue
     }

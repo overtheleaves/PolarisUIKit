@@ -11,7 +11,7 @@ import PolarisFramework
 
 public class DropdownComponent: UIControl {
     
-//    public typealias MenuSelectedHandler = (Int) -> Void
+    //    public typealias MenuSelectedHandler = (Int) -> Void
     
     public enum Direction {
         case vertical
@@ -71,7 +71,7 @@ public class DropdownComponent: UIControl {
         }
     }
     
-//    public var menuSelectedHandler: MenuSelectedHandler?
+    //    public var menuSelectedHandler: MenuSelectedHandler?
     
     private var placeholderWrapperView: UIView = UIView()
     public var placeholderView: UIView? {
@@ -103,30 +103,82 @@ public class DropdownComponent: UIControl {
         }
     }
     
-    public var onRightIcon: UIImage = UIImage() {
+    private var rightIconImageViewTopAnchorConstraint: NSLayoutConstraint? {
+        willSet { self.rightIconImageViewTopAnchorConstraint?.isActive = false }
+        didSet { self.rightIconImageViewTopAnchorConstraint?.isActive = true }
+    }
+    
+    private var rightIconImageViewBottomAnchorConstraint: NSLayoutConstraint? {
+        willSet { self.rightIconImageViewBottomAnchorConstraint?.isActive = false }
+        didSet { self.rightIconImageViewBottomAnchorConstraint?.isActive = true }
+    }
+   
+    private var rightIconImageViewTrailingAnchorConstraint: NSLayoutConstraint? {
+        willSet { self.rightIconImageViewTrailingAnchorConstraint?.isActive = false }
+        didSet { self.rightIconImageViewTrailingAnchorConstraint?.isActive = true }
+    }
+    
+    private var rightIconImageViewWidthAnchorConstraint: NSLayoutConstraint? {
+        willSet { self.rightIconImageViewWidthAnchorConstraint?.isActive = false }
+        didSet {  self.rightIconImageViewWidthAnchorConstraint?.isActive = true }
+    }
+    
+    private var rightIconImageViewHeightAnchorConstraint: NSLayoutConstraint? {
+        willSet { self.rightIconImageViewHeightAnchorConstraint?.isActive = false }
+        didSet { self.rightIconImageViewHeightAnchorConstraint?.isActive = true }
+    }
+    
+    public var onOffRightIconsInsets: UIEdgeInsets! {
         didSet {
-            self.rightIconImageView.image = self.onRightIcon
+            self.rightIconImageViewTopAnchorConstraint = self.rightIconImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: self.onOffRightIconsInsets.top)
+            self.rightIconImageViewTrailingAnchorConstraint = self.rightIconImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -self.onOffRightIconsInsets.right)
+            self.rightIconImageViewBottomAnchorConstraint = self.rightIconImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -self.onOffRightIconsInsets.bottom)
+            
+            adjustRightImageView()
         }
     }
-    public var offRightIcon: UIImage = UIImage()
+    
+    public var onOffRightIcons: (on: UIImage, off: UIImage)?
+    {
+        didSet {
+            if let icons = self.onOffRightIcons {
+                self.rightIconImageView.image = icons.off
+                adjustRightImageView()
+            }
+        }
+    }
+    
     private let rightIconImageView: UIImageView = UIImageView()
     
     private var isOpened: Bool = false {
         didSet {
             if isOpened {
-                UIView.transition(with: rightIconImageView, duration: 0.1, options: .transitionFlipFromBottom, animations: {
-                    self.rightIconImageView.image = self.onRightIcon
-                    self.rightIconImageView.maskImageColor(color: self.onRightIconColor)
-                }, completion: {(success) in
+                
+                if let icons = self.onOffRightIcons {
+                    // show after animation
+                    UIView.transition(with: rightIconImageView, duration: 0.1, options: .transitionFlipFromBottom, animations: {
+                        self.rightIconImageView.image = icons.on
+                        self.rightIconImageView.maskImageColor(color: self.onRightIconColor)
+                    }, completion: {(success) in
+                        self.showDropdownMenu()
+                    })
+                } else {
                     self.showDropdownMenu()
-                })
+                }
+                
             } else {
-                UIView.transition(with: rightIconImageView, duration: 0.1, options: .transitionFlipFromBottom, animations: {
-                    self.rightIconImageView.image = self.offRightIcon
-                    self.rightIconImageView.maskImageColor(color: self.offRightIconColor)
-                }, completion: { (success) in
+                
+                if let icons = self.onOffRightIcons {
+                    // hide after animation
+                    UIView.transition(with: rightIconImageView, duration: 0.1, options: .transitionFlipFromBottom, animations: {
+                        self.rightIconImageView.image = icons.off
+                        self.rightIconImageView.maskImageColor(color: self.offRightIconColor)
+                    }, completion: { (success) in
+                        self.hideDropdownMenu()
+                    })
+                } else {
                     self.hideDropdownMenu()
-                })
+                }
             }
         }
     }
@@ -137,7 +189,7 @@ public class DropdownComponent: UIControl {
     // constraints
     var dropdownMenuWrapperViewWidthConstraint: NSLayoutConstraint?
     var dropdownMenuWrapperViewHeightConstraint: NSLayoutConstraint?
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
@@ -154,7 +206,7 @@ public class DropdownComponent: UIControl {
         
         /// placeholder wrapper
         self.addSubview(self.placeholderWrapperView)
-
+        
         /// dropdown menu content view
         self.dropdownMenuContentView.axis = .vertical
         self.dropdownMenuContentView.distribution = .equalSpacing
@@ -172,25 +224,23 @@ public class DropdownComponent: UIControl {
         
         /// right icon imageview
         self.rightIconImageView.translatesAutoresizingMaskIntoConstraints = false
-        self.rightIconImageView.image = offRightIcon
-        self.rightIconImageView.maskImageColor(color: self.offRightIconColor)
         
         self.addSubview(rightIconImageView)
         self.bringSubviewToFront(rightIconImageView)
-        
+        self.rightIconImageView.contentMode = .scaleAspectFit
+        self.onOffRightIconsInsets = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 10)
+    }
+    
+    func adjustRightImageView() {
         let originalImageWidth = self.rightIconImageView.image?.size.width ?? 1
         let originalImageHeight = self.rightIconImageView.image?.size.height ?? 1
         let imageRatio: CGFloat =  originalImageWidth / originalImageHeight
-        let imageHeight: CGFloat = self.frame.height - 20.0
+        let imageHeight: CGFloat = self.frame.height - (self.onOffRightIconsInsets.top + self.onOffRightIconsInsets.bottom)
         let imageWidth: CGFloat = imageHeight * imageRatio
         
-        self.rightIconImageView.widthAnchor.constraint(equalToConstant: imageWidth).isActive = true
-        self.rightIconImageView.heightAnchor.constraint(equalToConstant: imageHeight).isActive = true
-        
-        self.rightIconImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10.0).isActive = true
-        self.rightIconImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10.0).isActive = true
+        self.rightIconImageViewHeightAnchorConstraint = self.rightIconImageView.heightAnchor.constraint(equalToConstant: imageHeight)
+        self.rightIconImageViewWidthAnchorConstraint = self.rightIconImageView.widthAnchor.constraint(equalToConstant: imageWidth)
     }
-    
     
     func placeholderDecorate() {
         if let attr = self.placeholderAttribute {
@@ -198,7 +248,7 @@ public class DropdownComponent: UIControl {
         }
     }
     
-
+    
     func dropdownMenuWrapperDecorate() {
         if let attr = self.dropdownMenuWrapperAttribute {
             Palette.decorateLayer(self.dropdownMenuWrapperView.layer,
@@ -259,7 +309,7 @@ public class DropdownComponent: UIControl {
         // add view
         target.addSubview(self.dropdownMenuWrapperView)
     }
-
+    
     
     /// show dropdown menu
     ///
@@ -286,7 +336,7 @@ public class DropdownComponent: UIControl {
             self.dropdownMenuWrapperViewHeightConstraint =  self.dropdownMenuWrapperView.heightAnchor.constraint(equalToConstant: contentViewSize.height)
             
             self.dropdownMenuWrapperViewWidthConstraint!.isActive = true
-            self.dropdownMenuWrapperViewHeightConstraint!.isActive = true            
+            self.dropdownMenuWrapperViewHeightConstraint!.isActive = true
             
             // 1. check width and add leading or trailing anchor
             if toggleViewX + contentViewSize.width > targetWidth {
@@ -350,22 +400,22 @@ public class DropdownComponent: UIControl {
     }
     
     
-//    public func setSelection(index: Int, invokeSelectedHandler: Bool) {
-        
-        //self.selection = index
-        
-        // replace placeholder
-//        self.placeholderView?.removeFromSuperview()
-//        if let snapshot = self.menuViews[index].snapshotView(afterScreenUpdates: false) {
-//            self.placeholderWrapperView.addSubview(snapshot)
-//        }
-        
-//        if invokeSelectedHandler {
-//            if let handler = menuSelectedHandler {
-//                handler(index)
-//            }
-//        }
-//    }
+    //    public func setSelection(index: Int, invokeSelectedHandler: Bool) {
+    
+    //self.selection = index
+    
+    // replace placeholder
+    //        self.placeholderView?.removeFromSuperview()
+    //        if let snapshot = self.menuViews[index].snapshotView(afterScreenUpdates: false) {
+    //            self.placeholderWrapperView.addSubview(snapshot)
+    //        }
+    
+    //        if invokeSelectedHandler {
+    //            if let handler = menuSelectedHandler {
+    //                handler(index)
+    //            }
+    //        }
+    //    }
     
     
     /// hide dropdown menu
