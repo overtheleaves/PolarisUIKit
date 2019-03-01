@@ -103,8 +103,12 @@ public class DropdownComponent: UIControl {
         }
     }
     
-    private var onRightIcon: UIImage? = UIImage(named: "dropdown_on")
-    private var offRightIcon: UIImage? = UIImage(named: "dropdown_off")
+    public var onRightIcon: UIImage = UIImage() {
+        didSet {
+            self.rightIconImageView.image = self.onRightIcon
+        }
+    }
+    public var offRightIcon: UIImage = UIImage()
     private let rightIconImageView: UIImageView = UIImageView()
     
     private var isOpened: Bool = false {
