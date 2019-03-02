@@ -36,6 +36,7 @@
 		FE8B3D4122165D74000F134E /* dropdown_on.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8B3D3F22165D74000F134E /* dropdown_on.png */; };
 		FE8B3D4222165D74000F134E /* dropdown_off.png in Resources */ = {isa = PBXBuildFile; fileRef = FE8B3D4022165D74000F134E /* dropdown_off.png */; };
 		FE8B3D4422165DCC000F134E /* UIImageView+Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8B3D4322165DCC000F134E /* UIImageView+Advanced.swift */; };
+		FE9E8ABC222A6FA4005A1EF3 /* UIView+Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9E8ABB222A6FA4005A1EF3 /* UIView+Advanced.swift */; };
 		FEF70BA7221FCB16002831FB /* PolarisFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF70BA6221FCB16002831FB /* PolarisFramework.framework */; };
 		FEF70BA8221FCB2B002831FB /* PolarisFramework.framework in Resources */ = {isa = PBXBuildFile; fileRef = FEF70BA6221FCB16002831FB /* PolarisFramework.framework */; };
 		FEF70BA9221FCC71002831FB /* PolarisFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FEF70BA6221FCB16002831FB /* PolarisFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -78,6 +79,7 @@
 		FE8B3D3F22165D74000F134E /* dropdown_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_on.png; sourceTree = "<group>"; };
 		FE8B3D4022165D74000F134E /* dropdown_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown_off.png; sourceTree = "<group>"; };
 		FE8B3D4322165DCC000F134E /* UIImageView+Advanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Advanced.swift"; sourceTree = "<group>"; };
+		FE9E8ABB222A6FA4005A1EF3 /* UIView+Advanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Advanced.swift"; sourceTree = "<group>"; };
 		FED369E82205706100B4F2A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED369EA2205706100B4F2A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FED369EF2205706300B4F2A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				FED369FD2205715900B4F2A8 /* Palette.swift */,
 				FED369FF220571AE00B4F2A8 /* StyleAttributeCompatible.swift */,
 				FED36A01220573EF00B4F2A8 /* UIView+StyleAttributeExtension.swift */,
+				FE9E8ABB222A6FA4005A1EF3 /* UIView+Advanced.swift */,
 				FE0CFD0F220EF526001B09C2 /* UIFont+Advanced.swift */,
 				FE8B3D4322165DCC000F134E /* UIImageView+Advanced.swift */,
 				FE8B3D392213F637000F134E /* Effects */,
@@ -348,6 +351,7 @@
 			files = (
 				FE0CFDAB22104845001B09C2 /* Palette.swift in Sources */,
 				FE0CFDAC22104845001B09C2 /* StyleAttributeCompatible.swift in Sources */,
+				FE9E8ABC222A6FA4005A1EF3 /* UIView+Advanced.swift in Sources */,
 				FE8B3D382213E949000F134E /* DropdownComponent.swift in Sources */,
 				FE0CFDAD22104845001B09C2 /* UIView+StyleAttributeExtension.swift in Sources */,
 				FE0CFDAE22104845001B09C2 /* UIFont+Advanced.swift in Sources */,
