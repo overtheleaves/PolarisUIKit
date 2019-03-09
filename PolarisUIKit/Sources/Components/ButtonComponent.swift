@@ -36,6 +36,46 @@ public class ButtonComponent: UIButton {
                         group.notifyButtonSelectedChange(self)
                     }
                 }
+                
+                if let attribute = Palette.getAttribute(name: self.styleAttr.type, linkState: .pressed) {
+                    Palette.decorateLayer(self.layer, view: self, attribute: attribute)
+                }
+                
+            } else {
+                if self.isEnabled  {
+                    // normal
+                    if let attribute = Palette.getAttribute(name: self.styleAttr.type, linkState: .normal) {
+                        Palette.decorateLayer(self.layer, view: self, attribute: attribute)
+                    }
+                } else {
+                    // disabled
+                    if let attribute = Palette.getAttribute(name: self.styleAttr.type, linkState: .disabled) {
+                        Palette.decorateLayer(self.layer, view: self, attribute: attribute)
+                    }
+                }
+            }
+        }
+    }
+    
+    override public var isEnabled: Bool {
+        didSet {
+            if self.isEnabled {
+                if self.isSelected {
+                    // pressed
+                    if let attribute = Palette.getAttribute(name: self.styleAttr.type, linkState: .pressed) {
+                        Palette.decorateLayer(self.layer, view: self, attribute: attribute)
+                    }
+                } else {
+                    // normal
+                    if let attribute = Palette.getAttribute(name: self.styleAttr.type, linkState: .normal) {
+                        Palette.decorateLayer(self.layer, view: self, attribute: attribute)
+                    }
+                }
+            } else {
+                // disabled
+                if let attribute = Palette.getAttribute(name: self.styleAttr.type, linkState: .disabled) {
+                    Palette.decorateLayer(self.layer, view: self, attribute: attribute)
+                }
             }
         }
     }
