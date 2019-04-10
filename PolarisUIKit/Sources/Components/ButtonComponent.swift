@@ -189,19 +189,7 @@ public class ButtonComponent: UIButton {
                     /// - image
                     if let imageAttribute = attribute.imageAttribute,
                         let image = imageAttribute.image {
-                        
-                        if imageWidthRatio == nil {
-                            imageWidthRatio = image.size.height / image.size.width
-                        }
-                        
-                        // image resizing
-                        if let resizedImage = resizeImage(with: image,
-                                                          size: CGSize(width: titleHeight * imageWidthRatio!, height: titleHeight)) {
-                            self.setImage(resizedImage.withRenderingMode(.alwaysOriginal),
-                                      for: uiState)
-                        } else {
-                            self.setImage(image, for: uiState)
-                        }
+                        self.setImage(image, for: uiState)
                     }
                 }
             }
@@ -213,13 +201,7 @@ public class ButtonComponent: UIButton {
             
             let width: CGFloat = titleHeight * imageWidthRatio
             let height: CGFloat = titleHeight
-            
-            /// default image undefined
-            if self.image(for: .normal) == nil {                
-                self.setImage(emptyImage(with: CGSize(width: width,
-                                                      height: height)), for: .normal)
-            }
-            
+                        
             iv.frame = CGRect(x: 0, y: 0,
                               width: width,
                               height: height)
@@ -237,34 +219,6 @@ public class ButtonComponent: UIButton {
         
         self.tintColor = UIColor.clear
         self.sizeToFit()
-    }
-    
-    func resizeImage(with image: UIImage, size: CGSize) -> UIImage? {
-        
-        UIGraphicsBeginImageContext(size)
-        if let context = UIGraphicsGetCurrentContext() {
-            
-            context.translateBy(x: 0.0, y: size.height)
-            context.scaleBy(x: 1.0, y: -1.0);
-            context.draw(image.cgImage!, in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-            
-            let scaledImage = UIGraphicsGetImageFromCurrentImageContext();
-            UIGraphicsEndImageContext();
-            
-            return scaledImage
-        }
-        return nil
-    }
-    
-    func emptyImage(with size: CGSize) -> UIImage? {
-        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        
-        UIGraphicsBeginImageContext(size)
-        UIRectFill(rect)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return image
     }
 }
 
